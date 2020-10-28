@@ -34,19 +34,17 @@ const SectionHowItWorks = styled.div`
 `;
 
 const HowItWorksIconsWrapper = styled.div`
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-column-gap: 25px;
+  grid-row-gap: 50px;
+  grid-template-columns: auto auto auto;
   margin-top: 30px;
-  flex-wrap: wrap;
 
   @media only screen and (max-width: 900px), screen and (max-height: 910px) {
     margin-top: 15px;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    align-items: center;
-    height: 100%;
-    max-height: 500px;
+    display: grid;
+    grid-column-gap: 25px;
+    grid-template-columns: auto auto;
   }
 `;
 

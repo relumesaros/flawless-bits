@@ -5,9 +5,7 @@ const HowItWorksIconWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: fit-content;
   color: #4c4c4c;
-  padding: 20px;
   flex-shrink: 0;
 
   @media only screen and (max-width: 900px), screen and (max-height: 910px) {
