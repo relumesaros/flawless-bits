@@ -1,0 +1,71 @@
+/* eslint-disable */
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #242424;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+h1 {
+    font-size: 60px;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0;
+}
+
+h3 {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0;
+}
+
+h4 {
+    font-size: 25px;
+    font-weight: 700;
+    margin: 0;
+}
+
+@media only screen and (max-width: 900px), screen and (max-height: 910px) {
+    h1 {
+        font-size: 25px;
+        letter-spacing: 1px;
+    }
+
+    h2 {
+        font-size: 15px;
+    }
+
+    h3 {
+        font-size: 13px;
+    }
+
+    h4 {
+        font-size: 10px;
+    }
+}
+
+#app {
+    height: 100%;
+}
+
+a:hover,
+a:visited,
+a:link,
+a:active {
+    text-decoration: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
