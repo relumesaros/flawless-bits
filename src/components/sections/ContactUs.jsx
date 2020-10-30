@@ -37,14 +37,14 @@ const SES = new AWS.SES({
 const Section = styled.div`
   position: relative;
   height: 100%;
-  padding: 90px 0 0 0;
+  padding: 60px 0 0 0;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   box-sizing: border-box;
   overflow: hidden;
 
-  @media only screen and (max-width: 900px), screen and (max-height: 910px) {
+  @media only screen and (max-width: 900px), screen and (max-height: 800px) {
     padding: 50px 0 0 0;
   }
 `;
@@ -55,7 +55,7 @@ const Content = styled.div`
   padding: 0 10% 0 10%;
   box-sizing: border-box;
   
-  @media only screen and (max-width: 900px), screen and (max-height: 910px) {
+  @media only screen and (max-width: 900px), screen and (max-height: 800px) {
     padding: 0 10% 0 10%;
   }
 `;
@@ -68,29 +68,27 @@ const FormWrapper = styled.div`
 `;
 
 const TileWrapper = styled.div`
-  text-align: left;
   margin-bottom: 10px;
 
-  @media only screen and (max-width: 900px), screen and (max-height: 910px) {
-    text-align: center;
+  @media only screen and (max-width: 900px), screen and (max-height: 800px) {
     margin-bottom: 0;
   }
 `;
 
 const ButtonCommonWrapper = styled.div`
-  margin-top: 10px;
-  width: 400px;
-  height: 70px;
+  width: 300px;
+  height: 60px;
   position: relative;
+  margin: 20px 0 10px 0;
 
-  @media only screen and (max-width: 900px), screen and (max-height: 910px) {
+  @media only screen and (max-width: 900px), screen and (max-height: 800px) {
     width: 200px;
     height: 50px;
   }
 `;
 
 const FooterWrapper = styled.div`
-  height: 180px;
+  height: 140px;
   display: flex;
   flex-direction: column;
   padding: 0 10%;
@@ -99,7 +97,7 @@ const FooterWrapper = styled.div`
   border-top: 1px solid #f1f0f0;
   letter-spacing: 2px;
 
-  @media only screen and (max-width: 900px), screen and (max-height: 910px) {
+  @media only screen and (max-width: 900px), screen and (max-height: 800px) {
     height: 70px;
   }
 `;
@@ -110,7 +108,7 @@ const FooterContentContainer = styled.div`
   grid-template-columns: auto auto;
   padding: 0 5px;
 
-  @media only screen and (max-width: 900px), screen and (max-height: 910px) {
+  @media only screen and (max-width: 900px), screen and (max-height: 800px) {
     padding: 0 2px;
     grid-column-gap: 3px;
   }
@@ -118,10 +116,10 @@ const FooterContentContainer = styled.div`
 
 const Row = styled.div`
   display: flex;
-  font-size: 20px;
+  font-size: 15px;
   align-items: center;
 
-  @media only screen and (max-width: 900px), screen and (max-height: 910px) {
+  @media only screen and (max-width: 900px), screen and (max-height: 800px) {
     font-size: 7px;
   }
 `;
@@ -129,7 +127,7 @@ const Row = styled.div`
 const Text = styled.p`
   margin: 5px 5px;
 
-  @media only screen and (max-width: 900px), screen and (max-height: 910px) {
+  @media only screen and (max-width: 900px), screen and (max-height: 800px) {
     margin: 3px 5px;
   }
 `;
@@ -137,7 +135,7 @@ const Text = styled.p`
 const FooterTitle = styled.h4`
   margin: 10px 0;
 
-  @media only screen and (max-width: 900px), screen and (max-height: 910px) {
+  @media only screen and (max-width: 900px), screen and (max-height: 800px) {
     margin: 5px 0 3px 0;
   }
 `;
@@ -297,7 +295,7 @@ const ContactUs = () => {
         </ScrollArrowUpPosition>
 
         <TileWrapper>
-          <h2>Contact Us.</h2>
+          <h3>Contact Us.</h3>
         </TileWrapper>
 
         <FormWrapper>
@@ -344,6 +342,7 @@ const ContactUs = () => {
               />
             </LoaderTransparent>
           </ButtonCommonWrapper>
+
         </FormWrapper>
       </Content>
 

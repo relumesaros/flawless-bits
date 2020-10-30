@@ -14,20 +14,20 @@ import { experienceConfig } from '../../config/experienceConfig';
 import PhpSvg from '../../assets/PhpSvg';
 
 const IconWrapper = styled.div`
-  height: 20px;
+  height: 25px;
 
-  @media only screen and (max-width: 900px), screen and (max-height: 910px) {
+  @media only screen and (max-width: 900px), screen and (max-height: 800px) {
     height: 15px;
   }
 `;
 
 const IconText = styled.p`
-  font-size: 8px;
+  font-size: 12px;
   font-weight: bold;
   margin: 0 0 0 2px;
-
-  @media only screen and (max-width: 900px), screen and (max-height: 910px) {
-    font-size: 8px;
+  
+  @media only screen and (max-width: 900px), screen and (max-height: 800px) {
+    font-size: 9px;
   }
 `;
 
@@ -38,18 +38,19 @@ const ExperienceItemContainer = styled.div`
   align-items: center;
   padding: 3px;
 
-  @media only screen and (max-width: 900px), screen and (max-height: 910px) {
+  @media only screen and (max-width: 900px), screen and (max-height: 800px) {
     font-size: 5px;
   }
 `;
 
 const ExperienceContainer = styled.div`
   display: grid;
-  grid-column-gap: 5px;
+  grid-column-gap: 10px;
+  justify-content: center;
   grid-template-columns: auto auto auto;
   padding: 0 5px;
 
-  @media only screen and (max-width: 900px), screen and (max-height: 910px) {
+  @media only screen and (max-width: 900px), screen and (max-height: 800px) {
     grid-column-gap: 3px;
   }
 `;

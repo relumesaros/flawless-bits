@@ -28,7 +28,7 @@ const SectionHowItWorks = styled.div`
   flex-direction: column;
   overflow: hidden;
 
-  @media only screen and (max-width: 900px), screen and (max-height: 910px) {
+  @media only screen and (max-width: 900px), screen and (max-height: 800px) {
     padding: 50px 17% 50px 17%;
   }
 `;
@@ -36,15 +36,16 @@ const SectionHowItWorks = styled.div`
 const HowItWorksIconsWrapper = styled.div`
   display: grid;
   grid-column-gap: 25px;
-  grid-row-gap: 50px;
+  grid-row-gap: 30px;
   grid-template-columns: auto auto auto;
   margin-top: 30px;
 
-  @media only screen and (max-width: 900px), screen and (max-height: 910px) {
+  @media only screen and (max-width: 900px), screen and (max-height: 800px) {
     margin-top: 15px;
     display: grid;
-    grid-column-gap: 25px;
+    grid-column-gap: 15px;
     grid-template-columns: auto auto;
+    grid-row-gap: 15px;
   }
 `;
 
@@ -52,7 +53,7 @@ const HowItWorksContent = styled.div`
   display: flex;
   justify-content: space-between;
 
-  @media only screen and (max-width: 900px), screen and (max-height: 910px) {
+  @media only screen and (max-width: 900px), screen and (max-height: 800px) {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -67,7 +68,7 @@ const HowItWorksText = styled.p`
   letter-spacing: 2px;
   max-width: 400px;
 
-  @media only screen and (max-width: 900px), screen and (max-height: 910px) {
+  @media only screen and (max-width: 900px), screen and (max-height: 800px) {
     font-size: 10px;
     margin: 10px 0 0 0;
     line-height: 15px;

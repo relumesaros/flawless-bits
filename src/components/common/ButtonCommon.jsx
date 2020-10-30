@@ -25,7 +25,7 @@ export const styles = {
       color: '#ffffff',
     },
 
-    '@media only screen and (max-width: 900px), screen and (max-height: 910px)': {
+    '@media only screen and (max-width: 900px), screen and (max-height: 800px)': {
       fontSize: '10px',
       letterSpacing: '1px',
     },

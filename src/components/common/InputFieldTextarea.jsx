@@ -6,11 +6,11 @@ import { TextareaAutosize } from '@material-ui/core';
 import stylesConfig from '../../config/stylesConfig';
 
 export const FormGroupFieldWrapper = styled.div`
-  margin: 20px 0;
+  margin: 20px 0 0 0;
   width: 100%;
 
-  @media only screen and (max-width: 900px), screen and (max-height: 910px) {
-    margin: 10px 0;
+  @media only screen and (max-width: 900px), screen and (max-height: 800px) {
+    margin: 10px 0 0 0;
   }
 `;
 
@@ -29,7 +29,7 @@ const FormGroupNumericFieldStyles = {
     letterSpacing: 'normal',
     color: '#212121',
 
-    '@media only screen and (max-width: 900px), screen and (max-height: 910px)': {
+    '@media only screen and (max-width: 900px), screen and (max-height: 800px)': {
       fontSize: '12px',
     },
   },

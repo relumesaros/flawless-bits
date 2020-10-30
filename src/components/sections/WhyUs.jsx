@@ -22,7 +22,7 @@ const SectionWhyUs = styled.div`
   display: flex;
   flex-direction: column;
 
-  @media only screen and (max-width: 900px), screen and (max-height: 910px) {
+  @media only screen and (max-width: 900px), screen and (max-height: 800px) {
     padding: 70px 17% 20px 17%;
   }
 `;
@@ -30,7 +30,7 @@ const SectionWhyUs = styled.div`
 const WhyUsTitle = styled.h2`
   text-align: right;
 
-  @media only screen and (max-width: 900px), screen and (max-height: 910px) {
+  @media only screen and (max-width: 900px), screen and (max-height: 800px) {
     text-align: center;
   }
 `;
@@ -54,7 +54,7 @@ const WhyUsContentFlexLeft = styled.div`
   letter-spacing: 2px;
   z-index: -1;
 
-  @media only screen and (max-width: 900px), screen and (max-height: 910px) {
+  @media only screen and (max-width: 900px), screen and (max-height: 800px) {
     position: absolute;
     top: 0;
     left: 0;
@@ -68,7 +68,7 @@ const WhyUsContentFlexRight = styled.div`
   flex: 1;
   padding-top: 50px;
 
-  @media only screen and (max-width: 900px), screen and (max-height: 910px) {
+  @media only screen and (max-width: 900px), screen and (max-height: 800px) {
     padding-top: 10px;
   }
 `;
@@ -78,7 +78,7 @@ const WhyUsText = styled.p`
   margin: 0;
   letter-spacing: 2px;
 
-  @media only screen and (max-width: 900px), screen and (max-height: 910px) {
+  @media only screen and (max-width: 900px), screen and (max-height: 800px) {
     font-size: 10px;
     letter-spacing: 1px;
   }
@@ -95,7 +95,7 @@ const ArrowRightIconWrapper = styled.div`
   font-size: 20px;
   padding-top: 3px;
 
-  @media only screen and (max-width: 900px), screen and (max-height: 910px) {
+  @media only screen and (max-width: 900px), screen and (max-height: 800px) {
     font-size: 10px;
   }
 `;

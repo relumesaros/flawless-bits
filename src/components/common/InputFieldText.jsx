@@ -7,7 +7,7 @@ import { TextField } from '@material-ui/core';
 
 export const FormHelperTextWrapper = styled.div`
   height: 20px;
-  @media only screen and (max-width: 900px), screen and (max-height: 910px) {
+  @media only screen and (max-width: 900px), screen and (max-height: 800px) {
     height: 10px;
   }
 `;
@@ -16,7 +16,7 @@ export const FormGroupFieldWrapper = styled.div`
   margin: 5px 0;
   width: 100%;
 
-  @media only screen and (max-width: 900px), screen and (max-height: 910px) {
+  @media only screen and (max-width: 900px), screen and (max-height: 800px) {
     margin: 5px 0;
   }
 `;
@@ -32,7 +32,7 @@ const FormGroupNumericFieldStyles = {
     fontStretch: 'normal',
     letterSpacing: '2px',
 
-    '@media only screen and (max-width: 900px), screen and (max-height: 910px)': {
+    '@media only screen and (max-width: 900px), screen and (max-height: 800px)': {
       padding: '0',
     },
   },
@@ -41,16 +41,16 @@ const FormGroupNumericFieldStyles = {
     fontSize: '15px',
     color: '#212121',
 
-    '@media only screen and (max-width: 900px), screen and (max-height: 910px)': {
+    '@media only screen and (max-width: 900px), screen and (max-height: 800px)': {
       fontSize: '8px',
       marginTop: '8px!important',
     },
   },
 
   formHelperText: {
-    fontSize: '18px',
+    fontSize: '15px',
 
-    '@media only screen and (max-width: 900px), screen and (max-height: 910px)': {
+    '@media only screen and (max-width: 900px), screen and (max-height: 800px)': {
       fontSize: '8px',
     },
   },
