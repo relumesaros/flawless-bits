@@ -26,7 +26,7 @@ export const styles = {
     },
 
     '@media only screen and (max-width: 900px), screen and (max-height: 800px)': {
-      fontSize: '10px',
+      fontSize: '9px',
       letterSpacing: '1px',
     },
   },

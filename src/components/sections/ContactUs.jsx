@@ -82,8 +82,8 @@ const ButtonCommonWrapper = styled.div`
   margin: 20px 0 10px 0;
 
   @media only screen and (max-width: 900px), screen and (max-height: 800px) {
-    width: 200px;
-    height: 50px;
+    width: 180px;
+    height: 40px;
     margin: 10px 0 5px 0;
   }
 `;
@@ -159,13 +159,16 @@ const SubtitleContent = styled.div`
 
 const Subtitle = styled.p`
   margin: 15px 0;
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 2px;
+  line-height: 30px;
 
   @media only screen and (max-width: 900px), screen and (max-height: 800px) {
     margin: 3px;
     font-size: 10px;
     margin: 7px 0;
+    letter-spacing: 1px;
+    line-height: 15px;
   }
 `;
 
