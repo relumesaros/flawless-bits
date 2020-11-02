@@ -9,7 +9,7 @@ export const FormGroupFieldWrapper = styled.div`
   margin: 20px 0 0 0;
   width: 100%;
 
-  @media only screen and (max-width: 900px), screen and (max-height: 800px) {
+  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
     margin: 10px 0 0 0;
   }
 `;
@@ -29,8 +29,8 @@ const FormGroupNumericFieldStyles = {
     letterSpacing: 'normal',
     color: stylesConfig.colors.text,
 
-    '@media only screen and (max-width: 900px), screen and (max-height: 800px)': {
-      fontSize: '12px',
+    '@media only screen and (max-width: 950px), screen and (max-height: 800px)': {
+      fontSize: '10px',
     },
   },
 };
@@ -48,7 +48,7 @@ const FormGroupField = ({
         <TextareaAutosize
           className={classes.root}
           placeholder={placeholder}
-          rows={3}
+          rows={2}
           value={fieldValue.value}
           name={name}
           onChange={onFieldUpdate}

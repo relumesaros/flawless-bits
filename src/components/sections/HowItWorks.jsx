@@ -20,7 +20,7 @@ import stylesConfig from '../../config/stylesConfig';
 const SectionHowItWorks = styled.div`
   position: relative;
   height: 100%;
-  padding: 110px 17% 60px 17%;
+  padding: 80px 17% 60px 17%;
   box-sizing: border-box;
   background-color: ${stylesConfig.colors.graySection};
   display: flex;
@@ -28,7 +28,7 @@ const SectionHowItWorks = styled.div`
   flex-direction: column;
   overflow: hidden;
 
-  @media only screen and (max-width: 900px), screen and (max-height: 800px) {
+  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
     padding: 50px 17% 50px 17%;
   }
 `;
@@ -40,7 +40,7 @@ const HowItWorksIconsWrapper = styled.div`
   grid-template-columns: auto auto auto;
   margin-top: 30px;
 
-  @media only screen and (max-width: 900px), screen and (max-height: 800px) {
+  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
     margin-top: 15px;
     display: grid;
     grid-column-gap: 15px;
@@ -53,7 +53,7 @@ const HowItWorksContent = styled.div`
   display: flex;
   justify-content: space-between;
 
-  @media only screen and (max-width: 900px), screen and (max-height: 800px) {
+  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -66,14 +66,15 @@ const HowItWorksText = styled.p`
   margin: 0;
   line-height: 35px;
   letter-spacing: 2px;
-  max-width: 400px;
+  max-width: 48%;
 
-  @media only screen and (max-width: 900px), screen and (max-height: 800px) {
+  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
     font-size: 10px;
     margin: 10px 0 0 0;
     line-height: 15px;
     letter-spacing: 1px;
     text-align: center;
+    max-width: 100%;
   }
 `;
 

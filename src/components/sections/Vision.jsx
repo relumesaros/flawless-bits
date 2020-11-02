@@ -44,13 +44,13 @@ const SectionVision = styled.div`
     z-index: -1;   
   }
   
-  @media only screen and (max-width: 900px), screen and (max-height: 800px) {
+  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
     padding: 60px 17% 60px 17%;
   }
 `;
 
 const Title = styled.h2`
-  @media only screen and (max-width: 900px), screen and (max-height: 800px) {
+  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
     padding: 0;
     text-align: center;
     margin: 0;
@@ -58,9 +58,9 @@ const Title = styled.h2`
 `;
 
 const WhatWeKnowWrapper = styled.div`
-  margin-top: 60px;
+  margin-top: 50px;
 
-  @media only screen and (max-width: 900px), screen and (max-height: 800px) {
+  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
     margin-top: 20px;
   }
 `;
@@ -70,7 +70,7 @@ const WhatWeKnowTitle = styled.h3`
   font-weight: 300;
   font-size: 22px;
   letter-spacing: 1px;
-  @media only screen and (max-width: 900px), screen and (max-height: 800px) {
+  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
     font-size: 12px;
     margin: 0;
   }
@@ -82,7 +82,7 @@ const WhatWeKnowIconsWrapper = styled.div`
   margin-top: 40px;
   justify-content: center;
 
-  @media only screen and (max-width: 900px), screen and (max-height: 800px) {
+  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
     margin-top: 20px;
   }
 `;
@@ -95,17 +95,17 @@ const IconWrapper = styled.div`
   flex-direction: column;
   flex-shrink: 0;
 
-  @media only screen and (max-width: 900px), screen and (max-height: 800px) {
+  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
     height: 60px;
   }
 `;
 
 const IconText = styled.p`
   font-size: 15px;
-  margin-top: 25px;
+  margin-top: 10px;
   font-weight: bold;
 
-  @media only screen and (max-width: 900px), screen and (max-height: 800px) {
+  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
     font-size: 8px;
     margin-top: 5px;
   }

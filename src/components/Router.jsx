@@ -16,7 +16,7 @@ const SwitchWrapper = styled.div`
   height: calc(100% - ${stylesConfig.navbarHeight.desktop - 1}px);
   width: 100%;
 
-  @media only screen and (max-width: 900px), screen and (max-height: 800px) {
+  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
     margin-top: ${stylesConfig.navbarHeight.mobile - 1}px;
     height: calc(100% - ${stylesConfig.navbarHeight.mobile - 1}px);
   }

@@ -26,7 +26,7 @@ const NavbarWrapper = styled.div`
     padding: 0 50px;
   }
 
-  @media only screen and (max-width: 900px), screen and (max-height: 800px) {
+  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
     padding: 0 10px;
     height: ${stylesConfig.navbarHeight.mobile - 1}px;
   }
@@ -36,7 +36,7 @@ const NavbarTitle = styled.h3`
   font-size: 30px;
   margin: 0 0 0 10px;
 
-  @media only screen and (max-width: 900px), screen and (max-height: 800px) {
+  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
     font-size: 12px;
     margin: 0 0 0 5px;
   }
@@ -45,7 +45,7 @@ const NavbarTitle = styled.h3`
 const NavbarLogo = styled.img`
   height: 60px;
 
-  @media only screen and (max-width: 900px), screen and (max-height: 800px) {
+  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
     height: 25px;
   }
 `;
@@ -73,7 +73,7 @@ const NavbarMenuItemWrapper = styled.div`
     ${props => (props.active ? stylesConfig.colors.blue : 'transparent')};
   transition: all 0.5s ease-in-out;
 
-  @media only screen and (max-width: 900px), screen and (max-height: 800px) {
+  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
     margin: 0 3px;
     font-size: 6px;
   }

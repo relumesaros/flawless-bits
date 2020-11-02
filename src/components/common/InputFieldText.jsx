@@ -7,9 +7,9 @@ import { TextField } from '@material-ui/core';
 import stylesConfig from '../../config/stylesConfig';
 
 export const FormHelperTextWrapper = styled.div`
-  height: 20px;
-  @media only screen and (max-width: 900px), screen and (max-height: 800px) {
-    height: 10px;
+  height: 14px;
+  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
+    height: 12px;
   }
 `;
 
@@ -22,13 +22,13 @@ const FormGroupNumericFieldStyles = {
     borderRadius: '4px',
     border: 'none',
     backgroundColor: 'white',
-    padding: '0 0 10px 0',
+    padding: '0 0 5px 0',
     fontWeight: 'normal',
     fontStyle: 'normal',
     fontStretch: 'normal',
     letterSpacing: '2px',
 
-    '@media only screen and (max-width: 900px), screen and (max-height: 800px)': {
+    '@media only screen and (max-width: 950px), screen and (max-height: 800px)': {
       padding: '0',
     },
   },
@@ -37,16 +37,15 @@ const FormGroupNumericFieldStyles = {
     fontSize: '15px',
     color: stylesConfig.colors.text,
 
-    '@media only screen and (max-width: 900px), screen and (max-height: 800px)': {
-      fontSize: '8px',
-      marginTop: '8px!important',
+    '@media only screen and (max-width: 950px), screen and (max-height: 800px)': {
+      fontSize: '10px'
     },
   },
 
   formHelperText: {
-    fontSize: '15px',
+    fontSize: '10px',
 
-    '@media only screen and (max-width: 900px), screen and (max-height: 800px)': {
+    '@media only screen and (max-width: 950px), screen and (max-height: 800px)': {
       fontSize: '8px',
     },
   },
@@ -66,6 +65,9 @@ const FormGroupField = (
         <TextField
           inputProps={{ className: classes.text }}
           classes={{ root: classes.root }}
+          InputLabelProps={{
+            className: classes.text
+          }}
           label={inputLabel}
           value={fieldValue.value}
           name={name}

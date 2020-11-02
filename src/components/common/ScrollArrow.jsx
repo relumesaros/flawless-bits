@@ -15,7 +15,7 @@ const ScrollArrowWrapper = styled.div`
     color: black;
   }
 
-  @media only screen and (max-width: 900px), screen and (max-height: 800px) {
+  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
     font-size: 25px;
   }
 `;

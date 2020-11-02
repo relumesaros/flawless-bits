@@ -9,13 +9,13 @@ const FooterWrapper = styled.div`
   height: 200px;
   display: flex;
   flex-direction: column;
-  padding: 0 10%;
+  padding: 0 17%;
   box-sizing: border-box;
   background-color: ${stylesConfig.colors.graySection};
   border-top: 1px solid #f1f0f0;
   letter-spacing: 2px;
 
-  @media only screen and (max-width: 900px), screen and (max-height: 800px) {
+  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
     height: 100px;
     letter-spacing: 0px;
   }
@@ -27,7 +27,7 @@ const FooterContentContainer = styled.div`
   grid-template-columns: auto auto;
   padding: 0 5px;
 
-  @media only screen and (max-width: 900px), screen and (max-height: 800px) {
+  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
     padding: 0 2px;
     grid-column-gap: 3px;
   }
@@ -44,7 +44,7 @@ const Row = styled.div`
     color: ${stylesConfig.colors.textHover};
   }
 
-  @media only screen and (max-width: 900px), screen and (max-height: 800px) {
+  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
     font-size: 7px;
   }
 `;
@@ -53,7 +53,7 @@ const Icon = styled.div`
   display: flex;
   font-size: 20px;
   
-  @media only screen and (max-width: 900px), screen and (max-height: 800px) {
+  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
     font-size: 10px;
   }
 `;
@@ -61,15 +61,15 @@ const Icon = styled.div`
 const Text = styled.p`
   margin: 5px 5px;
 
-  @media only screen and (max-width: 900px), screen and (max-height: 800px) {
+  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
     margin: 3px 5px;
   }
 `;
 
-const FooterTitle = styled.h4`
-  margin: 10px 0;
+const FooterTitle = styled.h5`
+  margin: 15px 0;
 
-  @media only screen and (max-width: 900px), screen and (max-height: 800px) {
+  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
     margin: 5px 0 3px 0;
   }
 `;
@@ -77,7 +77,9 @@ const FooterTitle = styled.h4`
 export default () => {
   return (
     <FooterWrapper>
-      <FooterTitle>We build software products.</FooterTitle>
+      <FooterTitle>
+        We provide quality software and service, shaping your ideas into great products.
+      </FooterTitle>
 
       <FooterContentContainer>
         <Row>

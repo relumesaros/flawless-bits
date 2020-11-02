@@ -34,14 +34,14 @@ const SES = new AWS.SES({
 const Section = styled.div`
   position: relative;
   height: 100%;
-  padding: 60px 0 0 0;
+  padding: 50px 0 0 0;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   box-sizing: border-box;
   overflow: hidden;
 
-  @media only screen and (max-width: 900px), screen and (max-height: 800px) {
+  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
     padding: 50px 0 0 0;
   }
 `;
@@ -49,12 +49,8 @@ const Section = styled.div`
 const Content = styled.div`
   width: 100%
   height: 100%;
-  padding: 0 10% 0 10%;
+  padding: 0 17% 0 17%;
   box-sizing: border-box;
-  
-  @media only screen and (max-width: 900px), screen and (max-height: 800px) {
-    padding: 0 10% 0 10%;
-  }
 `;
 
 const FormWrapper = styled.div`
@@ -62,13 +58,18 @@ const FormWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 48%;
+  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
+    max-width: 100%;
+    padding-top: 10px;
+  }
 `;
 
-const TileWrapper = styled.div`
-  margin-bottom: 10px;
-
-  @media only screen and (max-width: 900px), screen and (max-height: 800px) {
-    margin-bottom: 0;
+const TileWrapper = styled.h2`
+  max-width: 48%;
+  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
+    max-width: 100%;
+    text-align: center;
   }
 `;
 
@@ -78,7 +79,7 @@ const ButtonCommonWrapper = styled.div`
   position: relative;
   margin: 20px 0 10px 0;
 
-  @media only screen and (max-width: 900px), screen and (max-height: 800px) {
+  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
     width: 180px;
     height: 40px;
     margin: 10px 0 5px 0;
@@ -86,25 +87,43 @@ const ButtonCommonWrapper = styled.div`
 `;
 
 const SubtitleContent = styled.div`
-  padding: 15px 0 0 0;
+  max-width: 48%;
   
-  @media only screen and (max-width: 900px), screen and (max-height: 800px) {
-    padding: 5px 0 0 0;
+  padding: 20px 0 0 0;
+  
+  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
   }
 `;
 
-const Subtitle = styled.p`
-  margin: 15px 0;
+const HeaderContent = styled.div`
+  display: flex;
+  justify-content: space-between;
+  
+  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+`;
+
+const SubtitleText = styled.p`
+  margin: 0;
   font-size: 20px;
   letter-spacing: 2px;
   line-height: 30px;
+  padding: 10px 0;
 
-  @media only screen and (max-width: 900px), screen and (max-height: 800px) {
-    margin: 3px;
+  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
     font-size: 10px;
-    margin: 7px 0;
+    margin: 0;
     letter-spacing: 1px;
     line-height: 15px;
+    padding: 10px 0 0 0;
+    text-align: center;
   }
 `;
 
@@ -263,67 +282,72 @@ const ContactUs = () => {
         </ScrollArrowUpPosition>
 
         <TileWrapper>
-          <h3>Let's get in touch!</h3>
+          Let's get in touch!
         </TileWrapper>
 
-        <SubtitleContent>
-          <Subtitle>
-            Do you have project in mind and would like to discuss more about it?
-          </Subtitle>
+        <HeaderContent>
 
-          <Subtitle>
-            Please feel free to use the contact form below to ask us anything.
-            <br/>
-            We promise we’ll get back to you.
-          </Subtitle>
-        </SubtitleContent>
+          <SubtitleContent>
+            <SubtitleText>
+              Do you have project in mind and would like to discuss more about it?
+            </SubtitleText>
 
-        <FormWrapper>
-          <InputFieldText
-            inputLabel="Name"
-            name="name"
-            showError
-            fieldValue={fieldValues.name}
-            onFieldUpdate={onFieldUpdate}
-          />
+            <SubtitleText>
+              Please feel free to use the contact form below to ask us anything.
+              <br/>
+              We promise we’ll get back to you.
+            </SubtitleText>
+          </SubtitleContent>
 
-          <InputFieldText
-            inputLabel="Email"
-            name="email"
-            showError
-            fieldValue={fieldValues.email}
-            onFieldUpdate={onFieldUpdate}
-          />
+          <FormWrapper>
+            <InputFieldText
+              inputLabel="Name"
+              name="name"
+              showError
+              fieldValue={fieldValues.name}
+              onFieldUpdate={onFieldUpdate}
+            />
 
-          <InputFieldText
-            inputLabel="Company Name"
-            name="companyName"
-            fieldValue={fieldValues.companyName}
-            onFieldUpdate={onFieldUpdate}
-          />
+            <InputFieldText
+              inputLabel="Email"
+              name="email"
+              showError
+              fieldValue={fieldValues.email}
+              onFieldUpdate={onFieldUpdate}
+            />
 
-          <InputFieldTextarea
-            inputLabel="Description"
-            name="description"
-            placeholder="Tell us your idea!"
-            fieldValue={fieldValues.description}
-            onFieldUpdate={onFieldUpdate}
-          />
+            <InputFieldText
+              inputLabel="Company Name"
+              name="companyName"
+              fieldValue={fieldValues.companyName}
+              onFieldUpdate={onFieldUpdate}
+            />
 
-          <ButtonCommonWrapper>
-            <LoaderTransparent
-              active={messageRequestStatus === requestStatus.loading}
-            >
-              <ButtonCommon
-                classType={ButtonCommonStyles.blue}
-                disabled={!isValid}
-                content="Send Message."
-                callback={onSendContact}
-              />
-            </LoaderTransparent>
-          </ButtonCommonWrapper>
+            <InputFieldTextarea
+              inputLabel="Description"
+              name="description"
+              placeholder="Tell us your idea!"
+              fieldValue={fieldValues.description}
+              onFieldUpdate={onFieldUpdate}
+            />
 
-        </FormWrapper>
+            <ButtonCommonWrapper>
+              <LoaderTransparent
+                active={messageRequestStatus === requestStatus.loading}
+              >
+                <ButtonCommon
+                  classType={ButtonCommonStyles.blue}
+                  disabled={!isValid}
+                  content="Send Message."
+                  callback={onSendContact}
+                />
+              </LoaderTransparent>
+            </ButtonCommonWrapper>
+
+          </FormWrapper>
+
+        </HeaderContent>
+
       </Content>
 
       <Footer/>
