@@ -1,5 +1,7 @@
 export default {
   colors: {
+    textHover: 'black',
+    text: '#343434',
     blue: '#0E56F8',
     blueStrong: '#0b42bf',
     tangerine: '#f89100',

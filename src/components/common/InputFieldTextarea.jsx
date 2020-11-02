@@ -19,7 +19,7 @@ const FormGroupNumericFieldStyles = {
     borderRadius: '4px',
     border: 'solid 1px #dedede',
     backgroundColor: '#ffff',
-    fontSize: '20px',
+    fontSize: '15px',
     fontFamily: stylesConfig.fontFamily,
     padding: '10px 15px',
     fontWeight: 'normal',
@@ -27,7 +27,7 @@ const FormGroupNumericFieldStyles = {
     fontStretch: 'normal',
     lineHeight: 1.21,
     letterSpacing: 'normal',
-    color: '#212121',
+    color: stylesConfig.colors.text,
 
     '@media only screen and (max-width: 900px), screen and (max-height: 800px)': {
       fontSize: '12px',

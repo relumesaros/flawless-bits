@@ -5,14 +5,14 @@ export const teamMembers = {
 
 export const experienceConfig = {
   [teamMembers.aurelianMesaros]: {
-    reactJs: 3,
-    angularJs: 4,
+    reactJs: 4,
+    angularJs: 3,
     aws: 4,
     nodeJs: 6,
     java: 2,
     javascript: 7,
-    mySql: 2,
-    postgreSql: 1,
+    mySql: 4,
+    postgreSql: 2,
     mongoDb: 2,
     docker: 4,
     php: 1,

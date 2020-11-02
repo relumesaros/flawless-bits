@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import FormControl from '@material-ui/core/FormControl';
 import FormHelperText from '@material-ui/core/FormHelperText';
 import { TextField } from '@material-ui/core';
+import stylesConfig from '../../config/stylesConfig';
 
 export const FormHelperTextWrapper = styled.div`
   height: 20px;
@@ -13,12 +14,7 @@ export const FormHelperTextWrapper = styled.div`
 `;
 
 export const FormGroupFieldWrapper = styled.div`
-  margin: 5px 0;
   width: 100%;
-
-  @media only screen and (max-width: 900px), screen and (max-height: 800px) {
-    margin: 5px 0;
-  }
 `;
 
 const FormGroupNumericFieldStyles = {
@@ -26,7 +22,7 @@ const FormGroupNumericFieldStyles = {
     borderRadius: '4px',
     border: 'none',
     backgroundColor: 'white',
-    padding: '10px 0',
+    padding: '0 0 10px 0',
     fontWeight: 'normal',
     fontStyle: 'normal',
     fontStretch: 'normal',
@@ -39,7 +35,7 @@ const FormGroupNumericFieldStyles = {
 
   text: {
     fontSize: '15px',
-    color: '#212121',
+    color: stylesConfig.colors.text,
 
     '@media only screen and (max-width: 900px), screen and (max-height: 800px)': {
       fontSize: '8px',
@@ -55,14 +51,15 @@ const FormGroupNumericFieldStyles = {
     },
   },
 };
-const FormGroupField = ({
-  inputLabel,
-  classes,
-  fieldValue,
-  name,
-  onFieldUpdate,
-  showError,
-}) => {
+const FormGroupField = (
+  {
+    inputLabel,
+    classes,
+    fieldValue,
+    name,
+    onFieldUpdate,
+    showError,
+  }) => {
   return (
     <FormGroupFieldWrapper>
       <FormControl fullWidth>

@@ -16,7 +16,7 @@ const HowItWorksIconWrapper = styled.div`
 const HowItWorksIconNumberWrapper = styled.div`
   position: absolute;
   font-size: 90px;
-  opacity: 0.1;
+  opacity: 0.15;
   top: 0;
   left: 0;
   bottom: 0;

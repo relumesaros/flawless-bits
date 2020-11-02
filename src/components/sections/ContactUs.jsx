@@ -84,11 +84,12 @@ const ButtonCommonWrapper = styled.div`
   @media only screen and (max-width: 900px), screen and (max-height: 800px) {
     width: 200px;
     height: 50px;
+    margin: 10px 0 5px 0;
   }
 `;
 
 const FooterWrapper = styled.div`
-  height: 140px;
+  height: 200px;
   display: flex;
   flex-direction: column;
   padding: 0 10%;
@@ -98,7 +99,8 @@ const FooterWrapper = styled.div`
   letter-spacing: 2px;
 
   @media only screen and (max-width: 900px), screen and (max-height: 800px) {
-    height: 70px;
+    height: 100px;
+    letter-spacing: 0px;
   }
 `;
 
@@ -118,9 +120,24 @@ const Row = styled.div`
   display: flex;
   font-size: 15px;
   align-items: center;
+  
+  transition: all 0.5s ease-in-out;
+  
+  &:hover {
+    color: ${stylesConfig.colors.textHover};
+  }
 
   @media only screen and (max-width: 900px), screen and (max-height: 800px) {
     font-size: 7px;
+  }
+`;
+
+const Icon = styled.div`
+  display: flex;
+  font-size: 20px;
+  
+  @media only screen and (max-width: 900px), screen and (max-height: 800px) {
+    font-size: 10px;
   }
 `;
 
@@ -129,6 +146,26 @@ const Text = styled.p`
 
   @media only screen and (max-width: 900px), screen and (max-height: 800px) {
     margin: 3px 5px;
+  }
+`;
+
+const SubtitleContent = styled.div`
+  padding: 15px 0 0 0;
+  
+  @media only screen and (max-width: 900px), screen and (max-height: 800px) {
+    padding: 5px 0 0 0;
+  }
+`;
+
+const Subtitle = styled.p`
+  margin: 15px 0;
+  font-size: 18px;
+  font-weight: 700;
+
+  @media only screen and (max-width: 900px), screen and (max-height: 800px) {
+    margin: 3px;
+    font-size: 10px;
+    margin: 7px 0;
   }
 `;
 
@@ -285,7 +322,7 @@ const ContactUs = () => {
   return (
     <Section id={navbarConfig.sections.contactUs}>
       <Content>
-        <LinearGradientDesc />
+        <LinearGradientDesc/>
 
         <ScrollArrowUpPosition>
           <ScrollArrowUp
@@ -295,12 +332,24 @@ const ContactUs = () => {
         </ScrollArrowUpPosition>
 
         <TileWrapper>
-          <h3>Contact Us.</h3>
+          <h3>Let's get in touch!</h3>
         </TileWrapper>
+
+        <SubtitleContent>
+          <Subtitle>
+            Do you have project in mind and would like to discuss more about it?
+          </Subtitle>
+
+          <Subtitle>
+            Please feel free to use the contact form below to ask us anything.
+            <br/>
+            We promise we’ll get back to you.
+          </Subtitle>
+        </SubtitleContent>
 
         <FormWrapper>
           <InputFieldText
-            inputLabel="Name*"
+            inputLabel="Name"
             name="name"
             showError
             fieldValue={fieldValues.name}
@@ -308,7 +357,7 @@ const ContactUs = () => {
           />
 
           <InputFieldText
-            inputLabel="Email*"
+            inputLabel="Email"
             name="email"
             showError
             fieldValue={fieldValues.email}
@@ -325,7 +374,7 @@ const ContactUs = () => {
           <InputFieldTextarea
             inputLabel="Description"
             name="description"
-            placeholder="Project Description"
+            placeholder="Tell us your idea!"
             fieldValue={fieldValues.description}
             onFieldUpdate={onFieldUpdate}
           />
@@ -347,24 +396,30 @@ const ContactUs = () => {
       </Content>
 
       <FooterWrapper>
-        <FooterTitle>Contact</FooterTitle>
+        <FooterTitle>We build software products.</FooterTitle>
 
         <FooterContentContainer>
           <Row>
-            <PhoneIcon fontSize="inherit" />
-            <Text>+40744138340</Text>
-          </Row>
-
-          <Row>
-            <MailIcon fontSize="inherit" />
-            <Text>aurelian.mesaros@gmail.com</Text>
-          </Row>
-
-          <Row>
-            <LocationOnIcon fontSize="inherit" />
+            <Icon>
+              <LocationOnIcon fontSize="inherit"/>
+            </Icon>
             <Text>
               <strong>Romania</strong>, Cluj-Napoca
             </Text>
+          </Row>
+
+          <Row>
+            <Icon>
+              <PhoneIcon fontSize="inherit"/>
+            </Icon>
+            <Text>+40(0) 744 138340</Text>
+          </Row>
+
+          <Row>
+            <Icon>
+              <MailIcon fontSize="inherit"/>
+            </Icon>
+            <Text>aurelian.mesaros@gmail.com</Text>
           </Row>
         </FooterContentContainer>
       </FooterWrapper>

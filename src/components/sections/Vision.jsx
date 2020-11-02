@@ -24,7 +24,7 @@ import PhpSvg from '../../assets/PhpSvg';
 const SectionVision = styled.div`
   position: relative;
   height: 100%;
-  padding: 90px 17% 100px 17%;
+  padding: 80px 17% 60px 17%;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -58,7 +58,7 @@ const Title = styled.h2`
 `;
 
 const WhatWeKnowWrapper = styled.div`
-  margin-top: 70px;
+  margin-top: 60px;
 
   @media only screen and (max-width: 900px), screen and (max-height: 800px) {
     margin-top: 20px;
@@ -79,7 +79,7 @@ const WhatWeKnowTitle = styled.h3`
 const WhatWeKnowIconsWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
-  margin-top: 60px;
+  margin-top: 40px;
   justify-content: center;
 
   @media only screen and (max-width: 900px), screen and (max-height: 800px) {
@@ -88,7 +88,7 @@ const WhatWeKnowIconsWrapper = styled.div`
 `;
 
 const IconWrapper = styled.div`
-  height: 130px;
+  height: 120px;
   display: flex;
   align-items: center;
   justify-content: space-between;
