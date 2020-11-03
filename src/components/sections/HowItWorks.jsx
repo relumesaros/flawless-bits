@@ -36,16 +36,16 @@ const SectionHowItWorks = styled.div`
 const HowItWorksIconsWrapper = styled.div`
   display: grid;
   grid-column-gap: 25px;
-  grid-row-gap: 30px;
+  grid-row-gap: 70px;
   grid-template-columns: auto auto auto;
-  margin: 30px 0;
+  margin: 50px 0;
 
   @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
-    margin: 15px 0;
+    margin: 25px 0;
     display: grid;
     grid-column-gap: 15px;
     grid-template-columns: auto auto;
-    grid-row-gap: 15px;
+    grid-row-gap: 30px;
   }
 `;
 
