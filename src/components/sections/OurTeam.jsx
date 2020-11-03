@@ -34,16 +34,18 @@ const OurTeamContainerDesktop = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
-  margin: 30px 0 20px 0;
+  margin: 60px 0 20px 0;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  
+  @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
+    margin: 30px 0 20px 0;
+  }
 `;
 
 const Title = styled.h2`
-  @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
-    text-align: center;
-  }
+  text-align: center;
 `;
 
 const TeamMemberWrapper = styled.div`
