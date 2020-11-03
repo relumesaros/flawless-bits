@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Tooltip from '@material-ui/core/Tooltip';
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
+import stylesConfig from '../../config/stylesConfig';
 
 const ScrollArrowWrapper = styled.div`
   font-size: 40px;
@@ -15,7 +16,7 @@ const ScrollArrowWrapper = styled.div`
     color: black;
   }
 
-  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
+  @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
     font-size: 25px;
   }
 `;

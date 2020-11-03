@@ -8,7 +8,7 @@ import stylesConfig from '../../config/stylesConfig';
 
 export const FormHelperTextWrapper = styled.div`
   height: 14px;
-  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
+  @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
     height: 12px;
   }
 `;
@@ -28,7 +28,7 @@ const FormGroupNumericFieldStyles = {
     fontStretch: 'normal',
     letterSpacing: '2px',
 
-    '@media only screen and (max-width: 950px), screen and (max-height: 800px)': {
+    [`@media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px)`]: {
       padding: '0',
     },
   },
@@ -37,7 +37,7 @@ const FormGroupNumericFieldStyles = {
     fontSize: '15px',
     color: stylesConfig.colors.text,
 
-    '@media only screen and (max-width: 950px), screen and (max-height: 800px)': {
+    [`@media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px)`]: {
       fontSize: '10px'
     },
   },
@@ -45,7 +45,7 @@ const FormGroupNumericFieldStyles = {
   formHelperText: {
     fontSize: '10px',
 
-    '@media only screen and (max-width: 950px), screen and (max-height: 800px)': {
+    [`@media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px)`]: {
       fontSize: '8px',
     },
   },

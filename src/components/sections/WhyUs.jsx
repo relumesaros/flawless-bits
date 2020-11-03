@@ -11,10 +11,11 @@ import {
 } from '../common/ScrollArrow';
 import navbarConfig from '../../config/navbarConfig';
 import onScrollToHandler from '../../handlers/onScrollToHandler';
+import stylesConfig from '../../config/stylesConfig';
 
 const SectionWhyUs = styled.div`
   position: relative;
-  height: 100%;
+  min-height: 100%;
   padding: 80px 17% 60px 17%;
   box-sizing: border-box;
   background-color: rgba(16, 88, 249, 0.03);
@@ -22,7 +23,7 @@ const SectionWhyUs = styled.div`
   display: flex;
   flex-direction: column;
 
-  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
+  @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
     padding: 70px 17% 20px 17%;
   }
 `;
@@ -30,7 +31,7 @@ const SectionWhyUs = styled.div`
 const WhyUsTitle = styled.h2`
   text-align: right;
 
-  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
+  @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
     text-align: center;
   }
 `;
@@ -54,7 +55,7 @@ const WhyUsContentFlexLeft = styled.div`
   letter-spacing: 2px;
   z-index: -1;
 
-  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
+  @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
     position: absolute;
     top: 0;
     left: 0;
@@ -68,7 +69,7 @@ const WhyUsContentFlexRight = styled.div`
   flex: 1;
   padding-top: 30px;
 
-  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
+  @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
     padding-top: 10px;
   }
 `;
@@ -78,7 +79,7 @@ const WhyUsText = styled.p`
   margin: 0;
   letter-spacing: 2px;
 
-  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
+  @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
     font-size: 10px;
     letter-spacing: 1px;
   }
@@ -95,7 +96,7 @@ const ArrowRightIconWrapper = styled.div`
   font-size: 20px;
   padding-top: 3px;
 
-  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
+  @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
     font-size: 10px;
   }
 `;

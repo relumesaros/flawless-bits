@@ -15,17 +15,17 @@ import {
 } from '../common/ScrollArrow';
 import { teamMembers } from '../../config/experienceConfig';
 import Experience from '../common/Experience';
+import stylesConfig from '../../config/stylesConfig';
 
 const SectionOurTeam = styled.div`
   position: relative;
-  height: 100%;
+  min-height: 100%;
   padding: 120px 17% 60px 17%;
   display: flex;
-  justify-content: space-between;
   flex-direction: column;
   box-sizing: border-box;
 
-  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
+  @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
     padding: 50px 0 40px 0;
   }
 `;
@@ -34,31 +34,21 @@ const OurTeamContainerDesktop = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
-  flex-direction: column;
   margin: 30px 0 20px 0;
-
-  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
-    display: none;
-  }
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 `;
 
 const Title = styled.h2`
-  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
+  @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
     text-align: center;
   }
 `;
 
-const TeamMembersRow = styled.div`
-  display: flex;
-  flex: 1;
-
-  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
-  }
-`;
-
 const TeamMemberWrapper = styled.div`
-  flex: 1;
-  height: 100%;
+  height: 500px;
+  width: 400px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -66,8 +56,9 @@ const TeamMemberWrapper = styled.div`
   background-size: cover;
   opacity: 0.9;
   
-  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
-    
+  @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) { 
+    height: 400px;
+    width: 300px;
   }
 `;
 
@@ -80,7 +71,7 @@ const TeamMemberContent = styled.div`
     background: #fffffff0;
   }
 
-  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
+  @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
     height: 155px;
   }
 `;
@@ -92,7 +83,7 @@ const TeamMemberName = styled.p`
   margin: 8px 0 0 0;
   text-align: center;
 
-  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
+  @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
     letter-spacing: 1px;
     font-size: 12px;
     margin: 10px 0 0 0;
@@ -105,7 +96,7 @@ const TeamMemberRole = styled.p`
   margin: 5px 0 8px 0;
   text-align: center;
 
-  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
+  @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
     letter-spacing: 0;
     font-size: 10px;
     margin: 5px 0;
@@ -118,7 +109,7 @@ const OurTeamContainerMobileWrapper = styled.div`
   margin: 20px 0 10px 0;
   box-sizing: border-box;
 
-  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
+  @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
     display: flex;
   }
 
@@ -139,9 +130,6 @@ const TeamMember = (
     teamMemberName
   }
 ) => {
-  if (!name) {
-    return (<TeamMemberWrapper/>);
-  }
   return (
     <TeamMemberWrapper imageUrl={imageUrl}>
       <TeamMemberContent>
@@ -157,6 +145,7 @@ const TeamMember = (
 
 const roleFullstack = 'Full Stack Software Engineer, Co-Founder';
 
+// eslint-disable-next-line
 const OurTeamContainerMobile = () => {
   // eslint-disable-next-line
   const [index, setIndex] = useState(0);
@@ -209,23 +198,19 @@ const OurTeam = () => {
 
       <Title>Meet Our Team.</Title>
 
-      <OurTeamContainerMobile/>
-
       <OurTeamContainerDesktop>
-        <TeamMembersRow>
-          <TeamMember
-            name="Aurelian Mesaros"
-            imageUrl={teamAurelianMesarosSrc}
-            role={roleFullstack}
-            teamMemberName={teamMembers.aurelianMesaros}
-          />
-          <TeamMember
-            name="Ionut Mesaros"
-            imageUrl={teamIonutMesarosSrc}
-            role={roleFullstack}
-            teamMemberName={teamMembers.ionutMesaros}
-          />
-        </TeamMembersRow>
+        <TeamMember
+          name="Aurelian Mesaros"
+          imageUrl={teamAurelianMesarosSrc}
+          role={roleFullstack}
+          teamMemberName={teamMembers.aurelianMesaros}
+        />
+        <TeamMember
+          name="Ionut Mesaros"
+          imageUrl={teamIonutMesarosSrc}
+          role={roleFullstack}
+          teamMemberName={teamMembers.ionutMesaros}
+        />
       </OurTeamContainerDesktop>
 
       <ScrollArrowDownPosition>

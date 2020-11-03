@@ -24,6 +24,7 @@ import {
 import requestStatus from '../../constants/requestStatus';
 import LoaderTransparent from '../common/LoaderTransparent';
 import Footer from '../common/Footer';
+import stylesConfig from '../../config/stylesConfig';
 
 const SES = new AWS.SES({
   region: 'us-east-1',
@@ -33,96 +34,85 @@ const SES = new AWS.SES({
 
 const Section = styled.div`
   position: relative;
-  height: 100%;
-  padding: 50px 0 0 0;
+  min-height: 100%;
+  padding: 90px 0 0 0;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   box-sizing: border-box;
   overflow: hidden;
 
-  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
+  @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
     padding: 50px 0 0 0;
   }
 `;
 
 const Content = styled.div`
   width: 100%
-  height: 100%;
   padding: 0 17% 0 17%;
   box-sizing: border-box;
 `;
 
 const FormWrapper = styled.div`
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 48%;
-  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
-    max-width: 100%;
+  width: 48%;
+  @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
+    width: 100%;
     padding-top: 10px;
   }
 `;
 
 const TileWrapper = styled.h2`
-  max-width: 48%;
-  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
-    max-width: 100%;
+  @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
     text-align: center;
   }
 `;
 
 const ButtonCommonWrapper = styled.div`
-  width: 300px;
+  width: 100%;
   height: 60px;
   position: relative;
   margin: 20px 0 10px 0;
 
-  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
+  @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
     width: 180px;
     height: 40px;
-    margin: 10px 0 5px 0;
   }
 `;
 
-const SubtitleContent = styled.div`
-  max-width: 48%;
+const TitleAndSubtitleWrapper = styled.div`
+  width: 48%;
   
-  padding: 20px 0 0 0;
-  
-  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
-    max-width: 100%;
+  @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0;
   }
 `;
 
-const HeaderContent = styled.div`
+const TitleAndFromWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   
-  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
+  @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
     justify-content: flex-start;
     flex-direction: column;
   }
 `;
 
 const SubtitleText = styled.p`
-  margin: 0;
   font-size: 20px;
   letter-spacing: 2px;
   line-height: 30px;
-  padding: 10px 0;
+  margin: 20px 0 0 0;
 
-  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
+  @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
     font-size: 10px;
-    margin: 0;
     letter-spacing: 1px;
     line-height: 15px;
-    padding: 10px 0 0 0;
     text-align: center;
   }
 `;
@@ -281,13 +271,14 @@ const ContactUs = () => {
           />
         </ScrollArrowUpPosition>
 
-        <TileWrapper>
-          Let's get in touch!
-        </TileWrapper>
+        <TitleAndFromWrapper>
 
-        <HeaderContent>
+          <TitleAndSubtitleWrapper>
 
-          <SubtitleContent>
+            <TileWrapper>
+              Let's get in touch!
+            </TileWrapper>
+
             <SubtitleText>
               Do you have project in mind and would like to discuss more about it?
             </SubtitleText>
@@ -297,7 +288,7 @@ const ContactUs = () => {
               <br/>
               We promise we’ll get back to you.
             </SubtitleText>
-          </SubtitleContent>
+          </TitleAndSubtitleWrapper>
 
           <FormWrapper>
             <InputFieldText
@@ -346,7 +337,7 @@ const ContactUs = () => {
 
           </FormWrapper>
 
-        </HeaderContent>
+        </TitleAndFromWrapper>
 
       </Content>
 

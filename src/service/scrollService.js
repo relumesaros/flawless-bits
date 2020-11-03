@@ -1,7 +1,7 @@
 import stylesConfig from '../config/stylesConfig';
 
 export const getNavbarHeight = () => {
-  if (window.innerWidth > 950 && window.innerHeight > 800) {
+  if (window.innerWidth > stylesConfig.maxWidth && window.innerHeight > 600) {
     return stylesConfig.navbarHeight.desktop;
   }
   return stylesConfig.navbarHeight.mobile;

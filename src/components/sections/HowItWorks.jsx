@@ -19,8 +19,8 @@ import stylesConfig from '../../config/stylesConfig';
 
 const SectionHowItWorks = styled.div`
   position: relative;
-  height: 100%;
-  padding: 80px 17% 60px 17%;
+  min-height: 100%;
+  padding: 90px 17% 60px 17%;
   box-sizing: border-box;
   background-color: ${stylesConfig.colors.graySection};
   display: flex;
@@ -28,7 +28,7 @@ const SectionHowItWorks = styled.div`
   flex-direction: column;
   overflow: hidden;
 
-  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
+  @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
     padding: 50px 17% 50px 17%;
   }
 `;
@@ -38,10 +38,10 @@ const HowItWorksIconsWrapper = styled.div`
   grid-column-gap: 25px;
   grid-row-gap: 30px;
   grid-template-columns: auto auto auto;
-  margin-top: 30px;
+  margin: 30px 0;
 
-  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
-    margin-top: 15px;
+  @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
+    margin: 15px 0;
     display: grid;
     grid-column-gap: 15px;
     grid-template-columns: auto auto;
@@ -53,7 +53,7 @@ const HowItWorksContent = styled.div`
   display: flex;
   justify-content: space-between;
 
-  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
+  @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -68,7 +68,7 @@ const HowItWorksText = styled.p`
   letter-spacing: 2px;
   max-width: 48%;
 
-  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
+  @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
     font-size: 10px;
     margin: 10px 0 0 0;
     line-height: 15px;

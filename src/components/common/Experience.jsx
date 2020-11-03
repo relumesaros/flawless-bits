@@ -12,11 +12,12 @@ import MongoDbSvg from '../../assets/MongoDbSvg';
 import DockerSvg from '../../assets/DockerSvg';
 import { experienceConfig } from '../../config/experienceConfig';
 import PhpSvg from '../../assets/PhpSvg';
+import stylesConfig from '../../config/stylesConfig';
 
 const IconWrapper = styled.div`
   height: 22px;
 
-  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
+  @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
     height: 15px;
   }
 `;
@@ -26,7 +27,7 @@ const IconText = styled.p`
   font-weight: bold;
   margin: 0 0 0 3px;
   
-  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
+  @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
     font-size: 9px;
   }
 `;
@@ -38,7 +39,7 @@ const ExperienceItemContainer = styled.div`
   align-items: center;
   padding: 3px;
 
-  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
+  @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
     font-size: 5px;
   }
 `;
@@ -50,7 +51,7 @@ const ExperienceContainer = styled.div`
   grid-template-columns: auto auto auto;
   padding: 0 5px;
 
-  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
+  @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
     grid-column-gap: 3px;
   }
 `;

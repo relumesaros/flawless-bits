@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import stylesConfig from '../../config/stylesConfig';
 
 const HowItWorksIconWrapper = styled.div`
   display: flex;
@@ -8,7 +9,7 @@ const HowItWorksIconWrapper = styled.div`
   color: #4c4c4c;
   flex-shrink: 0;
 
-  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
+  @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
     padding: 5px 10px;
   }
 `;
@@ -26,7 +27,7 @@ const HowItWorksIconNumberWrapper = styled.div`
   justify-content: center;
   font-family: sans-serif;
 
-  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
+  @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
     font-size: 40px;
   }
 `;
@@ -41,7 +42,7 @@ const HowItWorksTitle = styled.h3`
   margin: 0;
   text-align: center;
 
-  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
+  @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
     font-size: 10px;
   }
 `;
@@ -52,7 +53,7 @@ const MaterialUIIconWrapper = styled.div`
   font-size: 70px;
   margin-bottom: 30px;
 
-  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
+  @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
     font-size: 25px;
     margin-bottom: 10px;
   }

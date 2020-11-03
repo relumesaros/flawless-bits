@@ -26,7 +26,7 @@ const NavbarWrapper = styled.div`
     padding: 0 50px;
   }
 
-  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
+  @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
     padding: 0 10px;
     height: ${stylesConfig.navbarHeight.mobile - 1}px;
   }
@@ -36,7 +36,7 @@ const NavbarTitle = styled.h3`
   font-size: 30px;
   margin: 0 0 0 10px;
 
-  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
+  @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
     font-size: 12px;
     margin: 0 0 0 5px;
   }
@@ -45,7 +45,7 @@ const NavbarTitle = styled.h3`
 const NavbarLogo = styled.img`
   height: 60px;
 
-  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
+  @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
     height: 25px;
   }
 `;
@@ -62,7 +62,7 @@ const NavbarLogoAndTitleWrapper = styled.div`
 `;
 
 const NavbarMenuItemWrapper = styled.div`
-  font-size: 15px;
+  font-size: 12px;
   font-weight: 700;
   margin: 0 10px;
   padding: 10px 0;
@@ -73,7 +73,7 @@ const NavbarMenuItemWrapper = styled.div`
     ${props => (props.active ? stylesConfig.colors.blue : 'transparent')};
   transition: all 0.5s ease-in-out;
 
-  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
+  @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
     margin: 0 3px;
     font-size: 6px;
   }
@@ -87,6 +87,37 @@ const NavbarMenuItem = ({ text, active, onCallback }) => {
   );
 };
 
+const getElementDistanceTop = (id) => document.getElementById(id).getBoundingClientRect().top;
+
+const getNavbarActive = () => {
+  const proximityHeight = window.innerHeight / 3;
+  const navbarHeight = getNavbarHeight();
+
+  const navbarAndProximityHeight = proximityHeight + navbarHeight;
+
+  if ((getElementDistanceTop(navbarConfig.sections.contactUs) - navbarAndProximityHeight) < 0) {
+    return navbarConfig.sections.contactUs;
+  }
+
+  if ((getElementDistanceTop(navbarConfig.sections.howItWorks) - navbarAndProximityHeight) < 0) {
+    return navbarConfig.sections.howItWorks;
+  }
+
+  if ((getElementDistanceTop(navbarConfig.sections.ourTeam) - navbarAndProximityHeight) < 0) {
+    return navbarConfig.sections.ourTeam;
+  }
+
+  if ((getElementDistanceTop(navbarConfig.sections.whyUs) - navbarAndProximityHeight) < 0) {
+    return navbarConfig.sections.whyUs;
+  }
+
+  if ((getElementDistanceTop(navbarConfig.sections.vision) - navbarAndProximityHeight) < 0) {
+    return navbarConfig.sections.vision;
+  }
+
+  return false;
+};
+
 const Navbar = () => {
   const globalContext = useGlobalState();
 
@@ -95,15 +126,21 @@ const Navbar = () => {
   const { navbarActive } = globalContext.context;
 
   const onScroll = debounce(() => {
-    const elementIndex = window.scrollY / (window.innerHeight - getNavbarHeight());
-    globalContext.setContext({
-      ...globalContext.context,
-      navbarActive: navbarConfig.indexes[Math.round(elementIndex)],
-    });
+    const navbarActiveScrolled = getNavbarActive();
+
+    if (navbarActiveScrolled) {
+      globalContext.setContext({
+        ...globalContext.context,
+        navbarActive: navbarActiveScrolled,
+      });
+    }
   }, 50);
 
   useEffect(() => {
     window.addEventListener('scroll', onScroll);
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+    };
   }, []);
 
   const onScrollToVision = () => {
@@ -129,7 +166,7 @@ const Navbar = () => {
   return (
     <NavbarWrapper>
       <NavbarLogoAndTitleWrapper onClick={onScrollToVision}>
-        <NavbarLogo src={logoSrc} />
+        <NavbarLogo src={logoSrc}/>
         <NavbarTitle>Flawless Bits</NavbarTitle>
       </NavbarLogoAndTitleWrapper>
       <NavbarMenuItemsWrapper>

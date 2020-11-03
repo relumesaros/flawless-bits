@@ -12,4 +12,6 @@ export default {
     mobile: 50,
     desktop: 110,
   },
+  maxWidth: 700,
+  maxHeight: 600
 };

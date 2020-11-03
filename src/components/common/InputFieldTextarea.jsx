@@ -8,10 +8,6 @@ import stylesConfig from '../../config/stylesConfig';
 export const FormGroupFieldWrapper = styled.div`
   margin: 20px 0 0 0;
   width: 100%;
-
-  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
-    margin: 10px 0 0 0;
-  }
 `;
 
 const FormGroupNumericFieldStyles = {
@@ -29,19 +25,20 @@ const FormGroupNumericFieldStyles = {
     letterSpacing: 'normal',
     color: stylesConfig.colors.text,
 
-    '@media only screen and (max-width: 950px), screen and (max-height: 800px)': {
+    [`@media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px)`]: {
       fontSize: '10px',
     },
   },
 };
 
-const FormGroupField = ({
-  placeholder,
-  classes,
-  fieldValue,
-  name,
-  onFieldUpdate,
-}) => {
+const FormGroupField = (
+  {
+    placeholder,
+    classes,
+    fieldValue,
+    name,
+    onFieldUpdate,
+  }) => {
   return (
     <FormGroupFieldWrapper>
       <FormControl fullWidth>

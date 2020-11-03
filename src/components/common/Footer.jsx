@@ -10,12 +10,13 @@ const FooterWrapper = styled.div`
   display: flex;
   flex-direction: column;
   padding: 0 17%;
+  margin-top: 30px;
   box-sizing: border-box;
   background-color: ${stylesConfig.colors.graySection};
   border-top: 1px solid #f1f0f0;
   letter-spacing: 2px;
 
-  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
+  @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
     height: 100px;
     letter-spacing: 0px;
   }
@@ -27,7 +28,7 @@ const FooterContentContainer = styled.div`
   grid-template-columns: auto auto;
   padding: 0 5px;
 
-  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
+  @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
     padding: 0 2px;
     grid-column-gap: 3px;
   }
@@ -44,16 +45,16 @@ const Row = styled.div`
     color: ${stylesConfig.colors.textHover};
   }
 
-  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
+  @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
     font-size: 7px;
   }
 `;
 
-const Icon = styled.div`
+const IconWrapper = styled.div`
   display: flex;
   font-size: 20px;
   
-  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
+  @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
     font-size: 10px;
   }
 `;
@@ -61,47 +62,59 @@ const Icon = styled.div`
 const Text = styled.p`
   margin: 5px 5px;
 
-  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
+  @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
     margin: 3px 5px;
   }
 `;
 
-const FooterTitle = styled.h5`
-  margin: 15px 0;
+const Title = styled.h3`
+  margin: 15px 0 0 0;
 
-  @media only screen and (max-width: 950px), screen and (max-height: 800px) {
+  @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
+    margin: 5px 0 0 0;
+  }
+`;
+
+const Subtitle = styled.p`
+  margin: 15px 0;
+  font-size: 15px;
+
+  @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
     margin: 5px 0 3px 0;
+    font-size: 10px;
   }
 `;
 
 export default () => {
   return (
     <FooterWrapper>
-      <FooterTitle>
+      <Title>Flawless Bits</Title>
+
+      <Subtitle>
         We provide quality software and service, shaping your ideas into great products.
-      </FooterTitle>
+      </Subtitle>
 
       <FooterContentContainer>
         <Row>
-          <Icon>
+          <IconWrapper>
             <LocationOnIcon fontSize="inherit"/>
-          </Icon>
+          </IconWrapper>
           <Text>
             <strong>Romania</strong>, Cluj-Napoca
           </Text>
         </Row>
 
         <Row>
-          <Icon>
+          <IconWrapper>
             <PhoneIcon fontSize="inherit"/>
-          </Icon>
+          </IconWrapper>
           <Text>+40(0) 744 138340</Text>
         </Row>
 
         <Row>
-          <Icon>
+          <IconWrapper>
             <MailIcon fontSize="inherit"/>
-          </Icon>
+          </IconWrapper>
           <Text>aurelian.mesaros@gmail.com</Text>
         </Row>
       </FooterContentContainer>
