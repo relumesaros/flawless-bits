@@ -24,6 +24,7 @@ h2 {
     font-size: 40px;
     font-weight: 700;
     margin: 0;
+    line-height: 60px;
 }
 
 h3 {
@@ -46,6 +47,7 @@ h4 {
 
     h2 {
         font-size: 15px;
+        line-height: 25px;
     }
 
     h3 {
