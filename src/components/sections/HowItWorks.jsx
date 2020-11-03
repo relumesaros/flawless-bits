@@ -45,7 +45,7 @@ const HowItWorksIconsWrapper = styled.div`
     display: grid;
     grid-column-gap: 15px;
     grid-template-columns: auto auto;
-    grid-row-gap: 30px;
+    grid-row-gap: 20px;
   }
 `;
 
