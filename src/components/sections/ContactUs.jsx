@@ -255,7 +255,7 @@ const ContactUs = () => {
         setMessageRequestStatus(requestStatus.error);
       } else {
         setFieldValues(fieldValuesDefault);
-        toastrService.success('Message was successfully sent');
+        toastrService.success("Message was successfully sent. We'll get back to you very soon!");
         // eslint-disable-next-line
         console.log('Email sent! Message ID: ', data.MessageId);
         setMessageRequestStatus(requestStatus.success);

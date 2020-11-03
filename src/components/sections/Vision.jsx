@@ -51,6 +51,7 @@ const SectionVision = styled.div`
 `;
 
 const Title = styled.h2`
+  max-width: 750px;
   @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
     padding: 0;
     text-align: center;
