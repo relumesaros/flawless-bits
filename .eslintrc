@@ -20,6 +20,7 @@
         "html": false
       }
     ],
+    "linebreak-style": 0,
     "no-script-url": "off",
     "arrow-body-style": "off",
     "arrow-parens": "off",
