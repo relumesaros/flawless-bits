@@ -51,6 +51,10 @@ const Content = styled.div`
   width: 100%
   padding: 0 17% 0 17%;
   box-sizing: border-box;
+  
+  @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
+    padding: 0 10% 0 10%;
+  }
 `;
 
 const FormWrapper = styled.div`

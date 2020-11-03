@@ -17,6 +17,7 @@ const FooterWrapper = styled.div`
   letter-spacing: 2px;
 
   @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
+    padding: 0 10%;
     height: 100px;
     letter-spacing: 0px;
   }
@@ -81,7 +82,7 @@ const Subtitle = styled.p`
 
   @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
     margin: 5px 0 3px 0;
-    font-size: 10px;
+    font-size: 8px;
   }
 `;
 
