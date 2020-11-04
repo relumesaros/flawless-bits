@@ -121,7 +121,7 @@ export default () => {
       <LinearGradientAsc />
 
       <Title>
-        We provide quality software and service, shaping your ideas into great products.
+        We build builds quality web-based applications. Transparent, efficient, fast and familiarized with the Agile methodology.
       </Title>
 
       <WhatWeKnowWrapper>

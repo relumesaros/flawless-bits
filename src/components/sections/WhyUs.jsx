@@ -51,7 +51,7 @@ const WhyUsContentFlexLeft = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #0e56f8;
+  color: ${stylesConfig.colors.blue};
   letter-spacing: 2px;
   z-index: -1;
 
