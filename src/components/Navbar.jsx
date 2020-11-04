@@ -57,7 +57,7 @@ const NavbarMenuItemsWrapper = styled.div`
 
 const NavbarLogoAndTitleWrapper = styled.div`
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   cursor: pointer;
 `;
 

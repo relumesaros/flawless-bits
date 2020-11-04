@@ -16,7 +16,7 @@ const HowItWorksIconWrapper = styled.div`
 
 const HowItWorksIconNumberWrapper = styled.div`
   position: absolute;
-  font-size: 90px;
+  font-size: 130px;
   opacity: 0.15;
   top: 0;
   left: 0;
@@ -26,9 +26,11 @@ const HowItWorksIconNumberWrapper = styled.div`
   align-items: center;
   justify-content: center;
   font-family: sans-serif;
+  letter-spacing: 10px;
 
   @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
     font-size: 40px;
+    letter-spacing: 3px;
   }
 `;
 
@@ -51,7 +53,7 @@ const MaterialUIIconWrapper = styled.div`
   display: flex;
   align-items: center;
   font-size: 70px;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 
   @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
     font-size: 25px;
