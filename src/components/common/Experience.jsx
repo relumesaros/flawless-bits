@@ -1,17 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import ReactJsSvg from '../../assets/ReactJsSvg';
-import AngularJsSvg from '../../assets/AngularJsSvg';
-import AwsSvg from '../../assets/AwsSvg';
-import NodeJsSvg from '../../assets/NodeJsSvg';
-import JavaSvg from '../../assets/JavaSvg';
-import JavaScriptSvg from '../../assets/JavaScriptSvg';
-import MySqlSvg from '../../assets/MySqlSvg';
-import PostgreSqlSvg from '../../assets/PostgreSqlSvg';
-import MongoDbSvg from '../../assets/MongoDbSvg';
-import DockerSvg from '../../assets/DockerSvg';
-import PhpSvg from '../../assets/PhpSvg';
 import stylesConfig from '../../config/stylesConfig';
+import { experienceLanguages } from '../../config/experienceConfig';
 
 const IconWrapper = styled.div`
   height: 22px;
@@ -58,95 +48,25 @@ const ExperienceContainer = styled.div`
 export default ({ experience }) => {
   return (
     <ExperienceContainer>
-      <ExperienceItemContainer>
-        <IconWrapper>
-          <ReactJsSvg />
-        </IconWrapper>
-        <IconText>ReactJS:</IconText>
-        <IconText>{experience.reactJs}yr.</IconText>
-      </ExperienceItemContainer>
+      {
+        Object.keys(experience).map((experienceName) => {
+          const experienceLanguage = experienceLanguages[experienceName];
+          if (!experienceLanguage) {
+            return null;
+          }
+          const { Icon } = experienceLanguage;
+          return (
+            <ExperienceItemContainer key={experienceName}>
+              <IconWrapper>
+                <Icon/>
+              </IconWrapper>
+              <IconText>{experienceLanguage.name}:</IconText>
+              <IconText>{experience[experienceName]}yr.</IconText>
+            </ExperienceItemContainer>
+          );
+        })
 
-      <ExperienceItemContainer>
-        <IconWrapper>
-          <AngularJsSvg />
-        </IconWrapper>
-        <IconText>AngularJS:</IconText>
-        <IconText>{experience.angularJs}yr.</IconText>
-      </ExperienceItemContainer>
-
-      <ExperienceItemContainer>
-        <IconWrapper>
-          <AwsSvg />
-        </IconWrapper>
-        <IconText>AWS:</IconText>
-        <IconText>{experience.aws}yr.</IconText>
-      </ExperienceItemContainer>
-
-      <ExperienceItemContainer>
-        <IconWrapper>
-          <NodeJsSvg />
-        </IconWrapper>
-        <IconText>Node.js:</IconText>
-        <IconText>{experience.nodeJs}yr.</IconText>
-      </ExperienceItemContainer>
-
-      <ExperienceItemContainer>
-        <IconWrapper>
-          <JavaSvg />
-        </IconWrapper>
-        <IconText>Java:</IconText>
-        <IconText>{experience.java}yr.</IconText>
-      </ExperienceItemContainer>
-
-      <ExperienceItemContainer>
-        <IconWrapper>
-          <JavaScriptSvg />
-        </IconWrapper>
-        <IconText>JavaScript:</IconText>
-        <IconText>{experience.javascript}yr.</IconText>
-      </ExperienceItemContainer>
-
-      <ExperienceItemContainer>
-        <IconWrapper>
-          <MySqlSvg />
-        </IconWrapper>
-        <IconText>MySQL:</IconText>
-        <IconText>{experience.mySql}yr.</IconText>
-      </ExperienceItemContainer>
-
-      <ExperienceItemContainer>
-        <IconWrapper>
-          <PostgreSqlSvg />
-        </IconWrapper>
-        <IconText>PostgreSQL:</IconText>
-        <IconText>{experience.postgreSql}yr.</IconText>
-      </ExperienceItemContainer>
-
-      <ExperienceItemContainer>
-        <IconWrapper>
-          <MongoDbSvg />
-        </IconWrapper>
-        <IconText>MongoDB:</IconText>
-        <IconText>{experience.mongoDb}yr.</IconText>
-      </ExperienceItemContainer>
-
-      <ExperienceItemContainer>
-        <IconWrapper>
-          <DockerSvg />
-        </IconWrapper>
-        <IconText>Docker:</IconText>
-        <IconText>{experience.docker}yr.</IconText>
-      </ExperienceItemContainer>
-
-      {experience.php && (
-        <ExperienceItemContainer>
-          <IconWrapper>
-            <PhpSvg />
-          </IconWrapper>
-          <IconText>PHP:</IconText>
-          <IconText>{experience.php}yr.</IconText>
-        </ExperienceItemContainer>
-      )}
+      }
     </ExperienceContainer>
   );
 };

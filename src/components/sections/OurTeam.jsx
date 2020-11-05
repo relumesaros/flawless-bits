@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { LinearGradientDesc } from '../common/LinearGradient';
 import onScrollToHandler from '../../handlers/onScrollToHandler';
 import navbarConfig from '../../config/navbarConfig';
+import teamAdrianMesarosSrc from '../../assets/teamAdrianMesaros.png';
 import teamAurelianMesarosSrc from '../../assets/teamAurelianMesaros.jpg';
 import teamIonutMesarosSrc from '../../assets/teamIonutMesaros.png';
 import teamZoltanZelenyacSrc from '../../assets/teamZoltanZelenyac.png';
@@ -219,6 +220,12 @@ const OurTeam = () => {
           imageUrl={teamIonutMesarosSrc}
           role={roleFullstack}
           experience={experienceConfig.ionutMesaros}
+        />
+        <TeamMember
+          name="Adrian Mesaros"
+          imageUrl={teamAdrianMesarosSrc}
+          role={roleFullstack}
+          experience={experienceConfig.adrianMesaros}
         />
         <TeamMember
           name="Zoltan Zelenyak"

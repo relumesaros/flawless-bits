@@ -20,6 +20,7 @@ import ReactJsSvg from '../../assets/ReactJsSvg';
 import AngularJsSvg from '../../assets/AngularJsSvg';
 import DockerSvg from '../../assets/DockerSvg';
 import PhpSvg from '../../assets/PhpSvg';
+import DotNetSvg from '../../assets/DotNetSvg';
 import stylesConfig from '../../config/stylesConfig';
 
 const SectionVision = styled.div`
@@ -129,6 +130,7 @@ export default () => {
         <WhatWeKnowTitle>What we know:</WhatWeKnowTitle>
 
         <WhatWeKnowIconsWrapper>
+
           <IconWrapper>
             <ReactJsSvg />
             <IconText>ReactJS</IconText>
@@ -160,6 +162,11 @@ export default () => {
           </IconWrapper>
 
           <IconWrapper>
+            <DotNetSvg />
+            <IconText>.NET</IconText>
+          </IconWrapper>
+
+          <IconWrapper>
             <MySqlSvg />
             <IconText>MySQL</IconText>
           </IconWrapper>
@@ -183,6 +190,7 @@ export default () => {
             <PhpSvg />
             <IconText>PHP</IconText>
           </IconWrapper>
+
         </WhatWeKnowIconsWrapper>
       </WhatWeKnowWrapper>
 
