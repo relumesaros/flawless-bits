@@ -1,10 +1,5 @@
-export const teamMembers = {
-  aurelianMesaros: 'aurelianMesaros',
-  ionutMesaros: 'ionutMesaros',
-};
-
 export const experienceConfig = {
-  [teamMembers.aurelianMesaros]: {
+  aurelianMesaros: {
     reactJs: 4,
     angularJs: 3,
     aws: 4,
@@ -17,7 +12,7 @@ export const experienceConfig = {
     docker: 4,
     php: 1,
   },
-  [teamMembers.ionutMesaros]: {
+  ionutMesaros: {
     reactJs: 1,
     angularJs: 1,
     aws: 1,

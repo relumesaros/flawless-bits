@@ -1,26 +1,26 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import Carousel from 'react-material-ui-carousel';
 
 import { LinearGradientDesc } from '../common/LinearGradient';
 import onScrollToHandler from '../../handlers/onScrollToHandler';
 import navbarConfig from '../../config/navbarConfig';
 import teamAurelianMesarosSrc from '../../assets/teamAurelianMesaros.jpg';
 import teamIonutMesarosSrc from '../../assets/teamIonutMesaros.png';
+import teamZoltanZelenyacSrc from '../../assets/teamZoltanZelenyac.png';
 import {
   ScrollArrowDown,
   ScrollArrowDownPosition,
   ScrollArrowUp,
   ScrollArrowUpPosition,
 } from '../common/ScrollArrow';
-import { teamMembers } from '../../config/experienceConfig';
+import { experienceConfig } from '../../config/experienceConfig';
 import Experience from '../common/Experience';
 import stylesConfig from '../../config/stylesConfig';
 
 const SectionOurTeam = styled.div`
   position: relative;
   min-height: 100%;
-  padding: 120px 17% 60px 17%;
+  padding: 120px 5% 60px 5%;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
@@ -33,14 +33,18 @@ const SectionOurTeam = styled.div`
 const OurTeamContainerDesktop = styled.div`
   width: 100%;
   height: 100%;
-  display: flex;
   margin: 60px 0 20px 0;
-  flex-wrap: wrap;
-  align-items: center;
+  display: grid;
+  grid-column-gap: 15px;
+  grid-row-gap: 70px;
+  grid-template-columns: repeat(auto-fit, 400px);
   justify-content: center;
-  
+
   @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
     margin: 30px 0 20px 0;
+    grid-template-columns: repeat(auto-fill, 300px);
+    grid-row-gap: 5px;
+    grid-column-gap: 5px;
   }
 `;
 
@@ -105,31 +109,31 @@ const TeamMemberRole = styled.p`
   }
 `;
 
-const OurTeamContainerMobileWrapper = styled.div`
-  display: none;
-  height: 100%;
-  margin: 20px 0 10px 0;
-  box-sizing: border-box;
-
-  @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
-    display: flex;
-  }
-
-  .Carousel-root-1,
-  >div,
-  .CarouselItem,
-  .CarouselItem > div {
-    height: 100%;
-    width: 100%;
-  }
-`;
+// const OurTeamContainerMobileWrapper = styled.div`
+//   display: none;
+//   height: 100%;
+//   margin: 20px 0 10px 0;
+//   box-sizing: border-box;
+// eslint-disable-next-line
+//   @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
+//     display: flex;
+//   }
+//
+//   .Carousel-root-1,
+//   >div,
+//   .CarouselItem,
+//   .CarouselItem > div {
+//     height: 100%;
+//     width: 100%;
+//   }
+// `;
 
 const TeamMember = (
   {
     name,
     imageUrl,
     role,
-    teamMemberName
+    experience
   }
 ) => {
   return (
@@ -139,50 +143,53 @@ const TeamMember = (
         <TeamMemberRole>
           {role}
         </TeamMemberRole>
-        <Experience teamMemberName={teamMemberName}/>
+        {experience && (
+          <Experience experience={experience}/>
+        )}
       </TeamMemberContent>
     </TeamMemberWrapper>
   );
 };
 
 const roleFullstack = 'Full Stack Software Engineer, Co-Founder';
+const roleUIUXDesigner = 'UI/UX Designer';
 
 // eslint-disable-next-line
-const OurTeamContainerMobile = () => {
-  // eslint-disable-next-line
-  const [index, setIndex] = useState(0);
-
-  // eslint-disable-next-line
-  const onChange = indexNew => {
-    // setIndex(indexNew);
-    // eslint-disable-next-line
-    console.error('index', index);
-  };
-
-  return (
-    <OurTeamContainerMobileWrapper>
-      <Carousel
-        navButtonsAlwaysVisible
-        autoPlay={false}
-        onChange={onChange()}
-        animation="slide"
-      >
-        <TeamMember
-          name="Aurelian Mesaros"
-          imageUrl={teamAurelianMesarosSrc}
-          role={roleFullstack}
-          teamMemberName={teamMembers.aurelianMesaros}
-        />
-        <TeamMember
-          name="Ionut Mesaros"
-          imageUrl={teamIonutMesarosSrc}
-          role={roleFullstack}
-          teamMemberName={teamMembers.ionutMesaros}
-        />
-      </Carousel>
-    </OurTeamContainerMobileWrapper>
-  );
-};
+// const OurTeamContainerMobile = () => {
+//   // eslint-disable-next-line
+//   const [index, setIndex] = useState(0);
+//
+//   // eslint-disable-next-line
+//   const onChange = indexNew => {
+//     // setIndex(indexNew);
+//     // eslint-disable-next-line
+//     console.error('index', index);
+//   };
+//
+//   return (
+//     <OurTeamContainerMobileWrapper>
+//       <Carousel
+//         navButtonsAlwaysVisible
+//         autoPlay={false}
+//         onChange={onChange()}
+//         animation="slide"
+//       >
+//         <TeamMember
+//           name="Aurelian Mesaros"
+//           imageUrl={teamAurelianMesarosSrc}
+//           role={roleFullstack}
+//           experience={experienceConfig.aurelianMesaros}
+//         />
+//         <TeamMember
+//           name="Ionut Mesaros"
+//           imageUrl={teamIonutMesarosSrc}
+//           role={roleFullstack}
+//           experience={experienceConfig.ionutMesaros}
+//         />
+//       </Carousel>
+//     </OurTeamContainerMobileWrapper>
+//   );
+// };
 
 const OurTeam = () => {
   const { onScrollTo } = onScrollToHandler();
@@ -205,13 +212,18 @@ const OurTeam = () => {
           name="Aurelian Mesaros"
           imageUrl={teamAurelianMesarosSrc}
           role={roleFullstack}
-          teamMemberName={teamMembers.aurelianMesaros}
+          experience={experienceConfig.aurelianMesaros}
         />
         <TeamMember
           name="Ionut Mesaros"
           imageUrl={teamIonutMesarosSrc}
           role={roleFullstack}
-          teamMemberName={teamMembers.ionutMesaros}
+          experience={experienceConfig.ionutMesaros}
+        />
+        <TeamMember
+          name="Zoltan Zelenyak"
+          imageUrl={teamZoltanZelenyacSrc}
+          role={roleUIUXDesigner}
         />
       </OurTeamContainerDesktop>
 

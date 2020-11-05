@@ -10,7 +10,6 @@ import MySqlSvg from '../../assets/MySqlSvg';
 import PostgreSqlSvg from '../../assets/PostgreSqlSvg';
 import MongoDbSvg from '../../assets/MongoDbSvg';
 import DockerSvg from '../../assets/DockerSvg';
-import { experienceConfig } from '../../config/experienceConfig';
 import PhpSvg from '../../assets/PhpSvg';
 import stylesConfig from '../../config/stylesConfig';
 
@@ -56,7 +55,7 @@ const ExperienceContainer = styled.div`
   }
 `;
 
-export default ({ teamMemberName }) => {
+export default ({ experience }) => {
   return (
     <ExperienceContainer>
       <ExperienceItemContainer>
@@ -64,7 +63,7 @@ export default ({ teamMemberName }) => {
           <ReactJsSvg />
         </IconWrapper>
         <IconText>ReactJS:</IconText>
-        <IconText>{experienceConfig[teamMemberName].reactJs}yr.</IconText>
+        <IconText>{experience.reactJs}yr.</IconText>
       </ExperienceItemContainer>
 
       <ExperienceItemContainer>
@@ -72,7 +71,7 @@ export default ({ teamMemberName }) => {
           <AngularJsSvg />
         </IconWrapper>
         <IconText>AngularJS:</IconText>
-        <IconText>{experienceConfig[teamMemberName].angularJs}yr.</IconText>
+        <IconText>{experience.angularJs}yr.</IconText>
       </ExperienceItemContainer>
 
       <ExperienceItemContainer>
@@ -80,7 +79,7 @@ export default ({ teamMemberName }) => {
           <AwsSvg />
         </IconWrapper>
         <IconText>AWS:</IconText>
-        <IconText>{experienceConfig[teamMemberName].aws}yr.</IconText>
+        <IconText>{experience.aws}yr.</IconText>
       </ExperienceItemContainer>
 
       <ExperienceItemContainer>
@@ -88,7 +87,7 @@ export default ({ teamMemberName }) => {
           <NodeJsSvg />
         </IconWrapper>
         <IconText>Node.js:</IconText>
-        <IconText>{experienceConfig[teamMemberName].nodeJs}yr.</IconText>
+        <IconText>{experience.nodeJs}yr.</IconText>
       </ExperienceItemContainer>
 
       <ExperienceItemContainer>
@@ -96,7 +95,7 @@ export default ({ teamMemberName }) => {
           <JavaSvg />
         </IconWrapper>
         <IconText>Java:</IconText>
-        <IconText>{experienceConfig[teamMemberName].java}yr.</IconText>
+        <IconText>{experience.java}yr.</IconText>
       </ExperienceItemContainer>
 
       <ExperienceItemContainer>
@@ -104,7 +103,7 @@ export default ({ teamMemberName }) => {
           <JavaScriptSvg />
         </IconWrapper>
         <IconText>JavaScript:</IconText>
-        <IconText>{experienceConfig[teamMemberName].javascript}yr.</IconText>
+        <IconText>{experience.javascript}yr.</IconText>
       </ExperienceItemContainer>
 
       <ExperienceItemContainer>
@@ -112,7 +111,7 @@ export default ({ teamMemberName }) => {
           <MySqlSvg />
         </IconWrapper>
         <IconText>MySQL:</IconText>
-        <IconText>{experienceConfig[teamMemberName].mySql}yr.</IconText>
+        <IconText>{experience.mySql}yr.</IconText>
       </ExperienceItemContainer>
 
       <ExperienceItemContainer>
@@ -120,7 +119,7 @@ export default ({ teamMemberName }) => {
           <PostgreSqlSvg />
         </IconWrapper>
         <IconText>PostgreSQL:</IconText>
-        <IconText>{experienceConfig[teamMemberName].postgreSql}yr.</IconText>
+        <IconText>{experience.postgreSql}yr.</IconText>
       </ExperienceItemContainer>
 
       <ExperienceItemContainer>
@@ -128,7 +127,7 @@ export default ({ teamMemberName }) => {
           <MongoDbSvg />
         </IconWrapper>
         <IconText>MongoDB:</IconText>
-        <IconText>{experienceConfig[teamMemberName].mongoDb}yr.</IconText>
+        <IconText>{experience.mongoDb}yr.</IconText>
       </ExperienceItemContainer>
 
       <ExperienceItemContainer>
@@ -136,16 +135,16 @@ export default ({ teamMemberName }) => {
           <DockerSvg />
         </IconWrapper>
         <IconText>Docker:</IconText>
-        <IconText>{experienceConfig[teamMemberName].docker}yr.</IconText>
+        <IconText>{experience.docker}yr.</IconText>
       </ExperienceItemContainer>
 
-      {experienceConfig[teamMemberName].php && (
+      {experience.php && (
         <ExperienceItemContainer>
           <IconWrapper>
             <PhpSvg />
           </IconWrapper>
           <IconText>PHP:</IconText>
-          <IconText>{experienceConfig[teamMemberName].php}yr.</IconText>
+          <IconText>{experience.php}yr.</IconText>
         </ExperienceItemContainer>
       )}
     </ExperienceContainer>
