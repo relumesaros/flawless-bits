@@ -116,7 +116,7 @@ export default () => {
           <IconWrapper>
             <MailIcon fontSize="inherit"/>
           </IconWrapper>
-          <Text>aurelian.mesaros@gmail.com</Text>
+          <Text>flawless-bits@gmail.com</Text>
         </Row>
       </FooterContentContainer>
     </FooterWrapper>
