@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { LinearGradientDesc } from '../common/LinearGradient';
 import onScrollToHandler from '../../handlers/onScrollToHandler';
 import navbarConfig from '../../config/navbarConfig';
-import teamAdrianMesarosSrc from '../../assets/teamAdrianMesaros.png';
+import teamAdrianMesarosSrc from '../../assets/teamAdrianMesaros.jpg';
 import teamAurelianMesarosSrc from '../../assets/teamAurelianMesaros.jpg';
 import teamIonutMesarosSrc from '../../assets/teamIonutMesaros.png';
 import teamZoltanZelenyacSrc from '../../assets/teamZoltanZelenyac.png';

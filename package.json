@@ -1,7 +1,7 @@
 {
-  "name": "pandemic-proximity",
+  "name": "Flawless Bits",
   "version": "1.0.0",
-  "description": "Boilerplate for react and webpack",
+  "description": "Flawless Bits is a startup outsourcing company that builds web-based applications for organizations looking to be more efficient, grow and serve their customers better.",
   "main": "index.js",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server --open",
