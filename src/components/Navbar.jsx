@@ -32,7 +32,7 @@ const NavbarWrapper = styled.div`
   }
 `;
 
-const NavbarTitle = styled.h3`
+const NavbarTitle = styled.p`
   font-size: 30px;
   margin: 0 0 0 10px;
 
@@ -57,7 +57,7 @@ const NavbarMenuItemsWrapper = styled.div`
 
 const NavbarLogoAndTitleWrapper = styled.div`
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   cursor: pointer;
 `;
 
@@ -69,6 +69,7 @@ const NavbarMenuItemWrapper = styled.div`
   cursor: pointer;
   flex-shrink: 0;
   color: ${props => (props.active ? stylesConfig.colors.blue : 'black')};
+  border-top: 2px solid transparent;
   border-bottom: 2px solid
     ${props => (props.active ? stylesConfig.colors.blue : 'transparent')};
   transition: all 0.5s ease-in-out;
