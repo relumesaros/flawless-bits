@@ -126,8 +126,7 @@ export default () => {
               <ArrowRightIcon fontSize="inherit" />
             </ArrowRightIconWrapper>
             <WhyUsText>
-              We collaborate only with experienced and mature software
-              engineers.
+              We collaborate only with experienced and mature software engineers.
             </WhyUsText>
           </WhyUsTextContainer>
 
@@ -136,33 +135,7 @@ export default () => {
               <ArrowRightIcon fontSize="inherit" />
             </ArrowRightIconWrapper>
             <WhyUsText>
-              Most of us have more than 10 years of experience in this domain.
-            </WhyUsText>
-          </WhyUsTextContainer>
-
-          <WhyUsTextContainer>
-            <ArrowRightIconWrapper>
-              <ArrowRightIcon fontSize="inherit" />
-            </ArrowRightIconWrapper>
-            <WhyUsText>
-              All our software engineers are also co-founders
-            </WhyUsText>
-          </WhyUsTextContainer>
-
-          <WhyUsTextContainer>
-            <ArrowRightIconWrapper>
-              <ArrowRightIcon fontSize="inherit" />
-            </ArrowRightIconWrapper>
-            <WhyUsText>We are very motivated to make you happy.</WhyUsText>
-          </WhyUsTextContainer>
-
-          <WhyUsTextContainer>
-            <ArrowRightIconWrapper>
-              <ArrowRightIcon fontSize="inherit" />
-            </ArrowRightIconWrapper>
-            <WhyUsText>
-              Our rates are small (30$ - 50$).
-              <br />
+              Many of us are also co-founders.
             </WhyUsText>
           </WhyUsTextContainer>
 
