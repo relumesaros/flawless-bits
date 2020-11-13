@@ -135,6 +135,15 @@ export default () => {
               <ArrowRightIcon fontSize="inherit" />
             </ArrowRightIconWrapper>
             <WhyUsText>
+              We write code for more than 10 years, we deliver fast.
+            </WhyUsText>
+          </WhyUsTextContainer>
+
+          <WhyUsTextContainer>
+            <ArrowRightIconWrapper>
+              <ArrowRightIcon fontSize="inherit" />
+            </ArrowRightIconWrapper>
+            <WhyUsText>
               Many of us are also co-founders.
             </WhyUsText>
           </WhyUsTextContainer>
