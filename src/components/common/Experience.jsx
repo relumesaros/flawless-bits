@@ -58,7 +58,7 @@ export default ({ experience }) => {
           return (
             <ExperienceItemContainer key={experienceName}>
               <IconWrapper>
-                <Icon/>
+                {Icon && <Icon/>}
               </IconWrapper>
               <IconText>{experienceLanguage.name}:</IconText>
               <IconText>{experience[experienceName]}yr.</IconText>

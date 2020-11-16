@@ -10,6 +10,7 @@ import MongoDbSvg from '../assets/MongoDbSvg';
 import DockerSvg from '../assets/DockerSvg';
 import PhpSvg from '../assets/PhpSvg';
 import DotNetSvg from '../assets/DotNetSvg';
+import GoSvg from '../assets/GoSvg';
 
 export const experienceConfig = {
   aurelianMesaros: {
@@ -44,6 +45,16 @@ export const experienceConfig = {
     angularJs: 3,
     reactJs: 2,
     aws: 1
+  },
+  alexPopa: {
+    java: 5,
+    javascript: 4,
+    reactJs: 3,
+    go: 4,
+    docker: 3,
+    postgreSQL: 3,
+    kubernetes: 2,
+    nodeJs: 2
   },
 };
 
@@ -95,5 +106,12 @@ export const experienceLanguages = {
   dotNet: {
     name: '.NET',
     Icon: DotNetSvg
+  },
+  go: {
+    name: 'Golang',
+    Icon: GoSvg
+  },
+  kubernetes: {
+    name: 'Kubernetes'
   }
 };

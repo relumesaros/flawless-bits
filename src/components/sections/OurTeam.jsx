@@ -7,6 +7,7 @@ import navbarConfig from '../../config/navbarConfig';
 import teamAdrianMesarosSrc from '../../assets/teamAdrianMesaros.jpg';
 import teamAurelianMesarosSrc from '../../assets/teamAurelianMesaros.jpg';
 import teamIonutMesarosSrc from '../../assets/teamIonutMesaros.png';
+import teamAlexPopaSrc from '../../assets/teamAlexPopa.png';
 import teamZoltanZelenyacSrc from '../../assets/teamZoltanZelenyac.png';
 import {
   ScrollArrowDown,
@@ -153,7 +154,7 @@ const TeamMember = (
 };
 
 const roleFullstack = 'Full Stack Software Engineer, Co-Founder';
-const roleUIUXDesigner = 'UI/UX Designer';
+const roleUIUXDesigner = 'UI/UX Designer, Co-Founder';
 
 // eslint-disable-next-line
 // const OurTeamContainerMobile = () => {
@@ -226,6 +227,12 @@ const OurTeam = () => {
           imageUrl={teamAdrianMesarosSrc}
           role={roleFullstack}
           experience={experienceConfig.adrianMesaros}
+        />
+        <TeamMember
+          name="Alex Popa"
+          imageUrl={teamAlexPopaSrc}
+          role={roleFullstack}
+          experience={experienceConfig.alexPopa}
         />
         <TeamMember
           name="Zoltan Zelenyak"
