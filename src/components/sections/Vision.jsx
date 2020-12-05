@@ -35,9 +35,8 @@ const SectionVision = styled.div`
   ::after {
     content: "";
     background: url("${visionSrc}") no-repeat center;
-    background-position: 30% 25%;
-    background-size: 70%;
-    opacity: 0.1;
+    background-size: cover;
+    opacity: 0.4;
     top: 0;
     left: 0;
     bottom: 0;
