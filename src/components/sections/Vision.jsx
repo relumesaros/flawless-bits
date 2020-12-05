@@ -9,18 +9,18 @@ import {
   ScrollArrowDown,
   ScrollArrowDownPosition,
 } from '../common/ScrollArrow';
-import AwsSvg from '../../assets/AwsSvg';
-import NodeJsSvg from '../../assets/NodeJsSvg';
-import JavaSvg from '../../assets/JavaSvg';
-import JavaScriptSvg from '../../assets/JavaScriptSvg';
-import MySqlSvg from '../../assets/MySqlSvg';
-import PostgreSqlSvg from '../../assets/PostgreSqlSvg';
-import MongoDbSvg from '../../assets/MongoDbSvg';
-import ReactJsSvg from '../../assets/ReactJsSvg';
-import AngularJsSvg from '../../assets/AngularJsSvg';
-import DockerSvg from '../../assets/DockerSvg';
-import PhpSvg from '../../assets/PhpSvg';
-import DotNetSvg from '../../assets/DotNetSvg';
+import AwsSvg from '../../assets/icons/AwsSvg';
+import NodeJsSvg from '../../assets/icons/NodeJsSvg';
+import JavaSvg from '../../assets/icons/JavaSvg';
+import JavaScriptSvg from '../../assets/icons/JavaScriptSvg';
+import MySqlSvg from '../../assets/icons/MySqlSvg';
+import PostgreSqlSvg from '../../assets/icons/PostgreSqlSvg';
+import MongoDbSvg from '../../assets/icons/MongoDbSvg';
+import ReactJsSvg from '../../assets/icons/ReactJsSvg';
+import AngularJsSvg from '../../assets/icons/AngularJsSvg';
+import DockerSvg from '../../assets/icons/DockerSvg';
+import PhpSvg from '../../assets/icons/PhpSvg';
+import DotNetSvg from '../../assets/icons/DotNetSvg';
 import stylesConfig from '../../config/stylesConfig';
 
 const SectionVision = styled.div`

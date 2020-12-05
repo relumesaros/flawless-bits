@@ -10,7 +10,7 @@ const ScrollArrowWrapper = styled.div`
   color: grey;
   width: fit-content;
   cursor: pointer;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.1s ease-in-out;
   opacity: 0.3;
   &:hover {
     color: black;

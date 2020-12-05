@@ -1,16 +1,16 @@
-import ReactJsSvg from '../assets/ReactJsSvg';
-import AngularJsSvg from '../assets/AngularJsSvg';
-import AwsSvg from '../assets/AwsSvg';
-import NodeJsSvg from '../assets/NodeJsSvg';
-import JavaSvg from '../assets/JavaSvg';
-import JavaScriptSvg from '../assets/JavaScriptSvg';
-import MySqlSvg from '../assets/MySqlSvg';
-import PostgreSqlSvg from '../assets/PostgreSqlSvg';
-import MongoDbSvg from '../assets/MongoDbSvg';
-import DockerSvg from '../assets/DockerSvg';
-import PhpSvg from '../assets/PhpSvg';
-import DotNetSvg from '../assets/DotNetSvg';
-import GoSvg from '../assets/GoSvg';
+import ReactJsSvg from '../assets/icons/ReactJsSvg';
+import AngularJsSvg from '../assets/icons/AngularJsSvg';
+import AwsSvg from '../assets/icons/AwsSvg';
+import NodeJsSvg from '../assets/icons/NodeJsSvg';
+import JavaSvg from '../assets/icons/JavaSvg';
+import JavaScriptSvg from '../assets/icons/JavaScriptSvg';
+import MySqlSvg from '../assets/icons/MySqlSvg';
+import PostgreSqlSvg from '../assets/icons/PostgreSqlSvg';
+import MongoDbSvg from '../assets/icons/MongoDbSvg';
+import DockerSvg from '../assets/icons/DockerSvg';
+import PhpSvg from '../assets/icons/PhpSvg';
+import DotNetSvg from '../assets/icons/DotNetSvg';
+import GoSvg from '../assets/icons/GoSvg';
 
 export const experienceConfig = {
   aurelianMesaros: {
@@ -25,6 +25,22 @@ export const experienceConfig = {
     mongoDb: 2,
     docker: 4,
     php: 1,
+  },
+  tudorPop: {
+    dotNet: 7,
+    msSql: 7,
+    javascript: 4,
+    angularJs: 4,
+    nodeJs: 1,
+    aws: 1,
+    reactJs: 3,
+    reactNative: 1,
+    coreNet: 2,
+    postgreSql: 1,
+    mongoDb: 2,
+    docker: 1,
+    management: 3,
+    scrumMaster: 2
   },
   ionutMesaros: {
     java: 8,
@@ -63,6 +79,10 @@ export const experienceLanguages = {
     name: 'ReactJS',
     Icon: ReactJsSvg
   },
+  reactNative: {
+    name: 'ReactNative',
+    Icon: ReactJsSvg
+  },
   angularJs: {
     name: 'AngularJS',
     Icon: AngularJsSvg
@@ -87,6 +107,10 @@ export const experienceLanguages = {
     name: 'MySQL',
     Icon: MySqlSvg
   },
+  msSql: {
+    name: 'MsSQL',
+    Icon: MySqlSvg
+  },
   postgreSql: {
     name: 'PostgreSQL',
     Icon: PostgreSqlSvg
@@ -107,11 +131,21 @@ export const experienceLanguages = {
     name: '.NET',
     Icon: DotNetSvg
   },
+  coreNet: {
+    name: '.NET CORE',
+    Icon: DotNetSvg
+  },
   go: {
     name: 'Golang',
     Icon: GoSvg
   },
   kubernetes: {
     name: 'Kubernetes'
+  },
+  management: {
+    name: 'Management'
+  },
+  scrumMaster: {
+    name: 'Scrum Master'
   }
 };

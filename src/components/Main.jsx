@@ -6,6 +6,7 @@ import WhyUs from './sections/WhyUs';
 import OurTeam from './sections/OurTeam';
 import ContactUs from './sections/ContactUs';
 import stylesConfig from '../config/stylesConfig';
+import Blog from "./sections/Blog";
 
 const HomeWrapper = styled.div`
   height: 100%;
@@ -22,6 +23,8 @@ const Main = () => {
       <OurTeam />
 
       <HowItWorks />
+
+      <Blog />
 
       <ContactUs />
     </HomeWrapper>

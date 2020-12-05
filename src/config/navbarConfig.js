@@ -4,6 +4,7 @@ export default {
     whyUs: 'whyUs',
     ourTeam: 'ourTeam',
     howItWorks: 'howItWorks',
+    blog: 'blog',
     contactUs: 'contactUs',
   },
   indexes: {
@@ -11,6 +12,7 @@ export default {
     1: 'whyUs',
     2: 'ourTeam',
     3: 'howItWorks',
-    4: 'contactUs',
+    4: 'blog',
+    5: 'contactUs',
   },
 };

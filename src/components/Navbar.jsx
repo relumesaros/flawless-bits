@@ -72,7 +72,7 @@ const NavbarMenuItemWrapper = styled.div`
   border-top: 2px solid transparent;
   border-bottom: 2px solid
     ${props => (props.active ? stylesConfig.colors.blue : 'transparent')};
-  transition: all 0.5s ease-in-out;
+  transition: all 0.1s ease-in-out;
 
   @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
     margin: 0 3px;
@@ -98,6 +98,10 @@ const getNavbarActive = () => {
 
   if ((getElementDistanceTop(navbarConfig.sections.contactUs) - navbarAndProximityHeight) < 0) {
     return navbarConfig.sections.contactUs;
+  }
+
+  if ((getElementDistanceTop(navbarConfig.sections.blog) - navbarAndProximityHeight) < 0) {
+    return navbarConfig.sections.blog;
   }
 
   if ((getElementDistanceTop(navbarConfig.sections.howItWorks) - navbarAndProximityHeight) < 0) {
@@ -160,6 +164,10 @@ const Navbar = () => {
     onScrollTo(navbarConfig.sections.howItWorks);
   };
 
+  const onScrollToBlog = () => {
+    onScrollTo(navbarConfig.sections.blog);
+  };
+
   const onScrollToContactUs = () => {
     onScrollTo(navbarConfig.sections.contactUs);
   };
@@ -190,6 +198,11 @@ const Navbar = () => {
           active={navbarActive === navbarConfig.sections.howItWorks}
           onCallback={onScrollToHowItWorks}
           text="HOW IT WORKS"
+        />
+        <NavbarMenuItem
+          active={navbarActive === navbarConfig.sections.blog}
+          onCallback={onScrollToBlog}
+          text="BLOG"
         />
         <NavbarMenuItem
           active={navbarActive === navbarConfig.sections.contactUs}

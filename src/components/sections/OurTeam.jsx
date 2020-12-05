@@ -4,11 +4,12 @@ import styled from 'styled-components';
 import { LinearGradientDesc } from '../common/LinearGradient';
 import onScrollToHandler from '../../handlers/onScrollToHandler';
 import navbarConfig from '../../config/navbarConfig';
-import teamAdrianMesarosSrc from '../../assets/teamAdrianMesaros.jpg';
-import teamAurelianMesarosSrc from '../../assets/teamAurelianMesaros.jpg';
-import teamIonutMesarosSrc from '../../assets/teamIonutMesaros.png';
-import teamAlexPopaSrc from '../../assets/teamAlexPopa.png';
-import teamZoltanZelenyacSrc from '../../assets/teamZoltanZelenyac.png';
+import teamAdrianMesarosSrc from '../../assets/team/teamAdrianMesaros.jpg';
+import teamAurelianMesarosSrc from '../../assets/team/teamAurelianMesaros.jpg';
+import teamIonutMesarosSrc from '../../assets/team/teamIonutMesaros.png';
+import teamAlexPopaSrc from '../../assets/team/teamAlexPopa.png';
+import teamZoltanZelenyacSrc from '../../assets/team/teamZoltanZelenyac.png';
+import teamTudorPopSrc from '../../assets/team/teamTudorPop.jpg';
 import {
   ScrollArrowDown,
   ScrollArrowDownPosition,
@@ -44,7 +45,7 @@ const OurTeamContainerDesktop = styled.div`
 
   @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
     margin: 30px 0 20px 0;
-    grid-template-columns: repeat(auto-fill, 300px);
+    grid-template-columns: repeat(auto-fill, 320px);
     grid-row-gap: 5px;
     grid-column-gap: 5px;
   }
@@ -66,7 +67,7 @@ const TeamMemberWrapper = styled.div`
   
   @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) { 
     height: 400px;
-    width: 300px;
+    width: 320px;
   }
 `;
 
@@ -80,7 +81,7 @@ const TeamMemberContent = styled.div`
   }
 
   @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
-    height: 155px;
+    height: 160px;
   }
 `;
 
@@ -215,6 +216,12 @@ const OurTeam = () => {
           imageUrl={teamAurelianMesarosSrc}
           role={roleFullstack}
           experience={experienceConfig.aurelianMesaros}
+        />
+        <TeamMember
+          name="Tudor"
+          imageUrl={teamTudorPopSrc}
+          role={roleFullstack}
+          experience={experienceConfig.tudorPop}
         />
         <TeamMember
           name="Ionut Mesaros"

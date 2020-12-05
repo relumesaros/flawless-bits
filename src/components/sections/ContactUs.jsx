@@ -34,6 +34,7 @@ const SES = new AWS.SES({
 
 const Section = styled.div`
   position: relative;
+  border-top: 2px solid ${stylesConfig.colors.graySection};
   min-height: 100%;
   padding: 90px 0 0 0;
   display: flex;

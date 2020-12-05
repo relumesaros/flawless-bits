@@ -40,7 +40,7 @@ const Row = styled.div`
   font-size: 15px;
   align-items: center;
   
-  transition: all 0.5s ease-in-out;
+  transition: all 0.1s ease-in-out;
   
   &:hover {
     color: ${stylesConfig.colors.textHover};
