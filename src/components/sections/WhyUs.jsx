@@ -89,6 +89,19 @@ const Text = styled.p`
   }
 `;
 
+const AboutUsText = styled.p`
+  font-size: 20px;
+  margin: 0;
+  line-height: 35px;
+  letter-spacing: 2px;
+
+  @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
+    font-size: 10px;
+    letter-spacing: 1px;
+    line-height: 15px;
+  }
+`;
+
 const WhyUsTextContainer = styled.div`
   display: flex;
   margin: 20px 0;
@@ -96,6 +109,10 @@ const WhyUsTextContainer = styled.div`
 
 const AboutUsTextContainer = styled.div`
   margin: 30px 10px;
+  
+  @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
+    margin: 10px 0;
+  }
 `;
 
 const ArrowRightIconWrapper = styled.div`
@@ -182,11 +199,15 @@ export default () => {
           <AboutUsTextContainer>
             <TitleAboutUs>Who are we?</TitleAboutUs>
 
-            <Text /* eslint-disable */>
-              We are a group of closed friends and teammates who worked together on the same projects.
-              Our contribution helped top software companies in Cluj-Napoca evolve.
-              We know each other very well and decided to start our own business.
-            </Text>
+            <AboutUsText /* eslint-disable */>
+              We are a group of close friends and teammates located in Cluj-Napoca Romania.
+              We knew each other before, but also also while working for top software companies in Cluj county.
+              Our contribution left a strong footprint on the projects we were assigned.
+              The motivation to start our own business was triggered by following key aspects:
+              we can decide the projects that come in and fit best our technology stack,
+              we can still be teammates and we know for sure that our team is a match,
+              and there is also the financial aspect.
+            </AboutUsText>
           </AboutUsTextContainer>
 
         </ContentRight>
