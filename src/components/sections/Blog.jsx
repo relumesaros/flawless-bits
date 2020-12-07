@@ -111,9 +111,10 @@ const BlogCardTitle = styled.p`
 
 const BlogCard = ({ imageSrc, title, link }) => {
   return (
-    <BlogCardWrapper href={link}
-                     target="_blank"
-                     imageSrc={imageSrc}
+    <BlogCardWrapper
+      href={link}
+      target="_blank"
+      imageSrc={imageSrc}
     >
       <BlogCardContent>
         <BlogCardTitle>{title}</BlogCardTitle>

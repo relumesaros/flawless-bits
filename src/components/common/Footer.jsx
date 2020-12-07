@@ -3,18 +3,21 @@ import styled from 'styled-components';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
 import PhoneIcon from '@material-ui/icons/Phone';
 import MailIcon from '@material-ui/icons/Mail';
+import LinkedInSvg from '../../assets/icons/LinkedInSvg';
+import FacebookSvg from '../../assets/icons/FacebookSvg';
 import stylesConfig from '../../config/stylesConfig';
+import logoSrc from '../../assets/logo.png';
 
 const FooterWrapper = styled.div`
-  height: 200px;
-  display: flex;
-  flex-direction: column;
+  height: 220px;
   padding: 0 17%;
   margin-top: 30px;
   box-sizing: border-box;
   background-color: ${stylesConfig.colors.graySection};
   border-top: 1px solid #f1f0f0;
   letter-spacing: 2px;
+  background: black;
+  color: white;
 
   @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
     padding: 0 10%;
@@ -26,7 +29,8 @@ const FooterWrapper = styled.div`
 const FooterContentContainer = styled.div`
   display: grid;
   grid-column-gap: 5px;
-  grid-template-columns: auto auto;
+  grid-row-gap: 5px;
+  grid-template-columns: auto auto auto;
   padding: 0 5px;
 
   @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
@@ -39,12 +43,7 @@ const Row = styled.div`
   display: flex;
   font-size: 15px;
   align-items: center;
-  
-  transition: all 0.1s ease-in-out;
-  
-  &:hover {
-    color: ${stylesConfig.colors.textHover};
-  }
+  white-space: nowrap;
 
   @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
     font-size: 7px;
@@ -53,10 +52,41 @@ const Row = styled.div`
 
 const IconWrapper = styled.div`
   display: flex;
-  font-size: 20px;
+  font-size: 25px;
   
   @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
     font-size: 10px;
+  }
+`;
+
+const ContactIconsWrapper = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+const HeaderSection = styled.div`
+  display: grid;
+  align-items: center;
+  margin: 15px 0;
+  grid-column-gap: 5px;
+  grid-row-gap: 2px;
+  grid-template-columns: auto auto;
+  justify-content: flex-start;
+  
+  @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
+    margin: 5px 0 0 0;
+  }
+`;
+
+const SVGLink = styled.a`
+  height: 40px;
+  cursor: pointer;
+  margin: 0 10px;
+  background: white;
+  color: transparent;
+  
+  @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
+    height: 15px;
   }
 `;
 
@@ -68,16 +98,17 @@ const Text = styled.p`
   }
 `;
 
-const Title = styled.h3`
-  margin: 15px 0 0 0;
+const Title = styled.p`
+  margin: 0;
+  font-size: 25px;
 
   @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
-    margin: 5px 0 0 0;
+    font-size: 15px;
   }
 `;
 
 const Subtitle = styled.p`
-  margin: 15px 0;
+  margin: 0;
   font-size: 15px;
 
   @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
@@ -86,14 +117,29 @@ const Subtitle = styled.p`
   }
 `;
 
+const NavbarLogo = styled.img`
+  height: 40px;
+
+  @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
+    height: 15px;
+  }
+`;
+
 export default () => {
   return (
     <FooterWrapper>
-      <Title>Flawless Bits</Title>
 
-      <Subtitle>
-        We provide quality software and service, shaping your ideas into great products.
-      </Subtitle>
+      <HeaderSection>
+        <NavbarLogo src={logoSrc}/>
+
+        <Title>Flawless Bits</Title>
+
+        <div/>
+
+        <Subtitle>
+          Transparent, efficient, fast and familiarized with the Agile methodology.
+        </Subtitle>
+      </HeaderSection>
 
       <FooterContentContainer>
         <Row>
@@ -109,8 +155,25 @@ export default () => {
           <IconWrapper>
             <PhoneIcon fontSize="inherit"/>
           </IconWrapper>
-          <Text>+40(0) 744 138340</Text>
+          <Text>+4 0744-138-340</Text>
         </Row>
+
+        <ContactIconsWrapper>
+          <SVGLink
+            href="https://www.linkedin.com/company/flawless-bits"
+            target="_blank"
+          >
+            <LinkedInSvg/>
+          </SVGLink>
+
+          <SVGLink
+            href="https://www.facebook.com/flawless.bits"
+            target="_blank"
+          >
+            <FacebookSvg/>
+          </SVGLink>
+
+        </ContactIconsWrapper>
 
         <Row>
           <IconWrapper>
@@ -118,6 +181,7 @@ export default () => {
           </IconWrapper>
           <Text>flawless-bits@gmail.com</Text>
         </Row>
+
       </FooterContentContainer>
     </FooterWrapper>
   );

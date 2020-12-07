@@ -218,12 +218,6 @@ const OurTeam = () => {
           experience={experienceConfig.aurelianMesaros}
         />
         <TeamMember
-          name="Tudor"
-          imageUrl={teamTudorPopSrc}
-          role={roleFullstack}
-          experience={experienceConfig.tudorPop}
-        />
-        <TeamMember
           name="Ionut Mesaros"
           imageUrl={teamIonutMesarosSrc}
           role={roleFullstack}
@@ -234,6 +228,12 @@ const OurTeam = () => {
           imageUrl={teamAdrianMesarosSrc}
           role={roleFullstack}
           experience={experienceConfig.adrianMesaros}
+        />
+        <TeamMember
+          name="Tudor"
+          imageUrl={teamTudorPopSrc}
+          role={roleFullstack}
+          experience={experienceConfig.tudorPop}
         />
         <TeamMember
           name="Alex Popa"

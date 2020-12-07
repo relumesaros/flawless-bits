@@ -28,7 +28,7 @@ const SectionWhyUs = styled.div`
   }
 `;
 
-const WhyUsTitle = styled.h2`
+const TitleWhyUs = styled.h2`
   text-align: right;
 
   @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
@@ -36,7 +36,11 @@ const WhyUsTitle = styled.h2`
   }
 `;
 
-const WhyUsContent = styled.div`
+const TitleAboutUs = styled.h2`
+  margin: 0 0 20px 0;
+`;
+
+const Content = styled.div`
   display: flex;
   height: 100%;
 `;
@@ -65,7 +69,7 @@ const WhyUsContentFlexLeft = styled.div`
   }
 `;
 
-const WhyUsContentFlexRight = styled.div`
+const ContentRight = styled.div`
   flex: 1;
   padding-top: 30px;
 
@@ -74,7 +78,7 @@ const WhyUsContentFlexRight = styled.div`
   }
 `;
 
-const WhyUsText = styled.p`
+const Text = styled.p`
   font-size: 20px;
   margin: 0;
   letter-spacing: 2px;
@@ -88,6 +92,10 @@ const WhyUsText = styled.p`
 const WhyUsTextContainer = styled.div`
   display: flex;
   margin: 20px 0;
+`;
+
+const AboutUsTextContainer = styled.div`
+  margin: 30px 10px;
 `;
 
 const ArrowRightIconWrapper = styled.div`
@@ -106,7 +114,7 @@ export default () => {
 
   return (
     <SectionWhyUs id={navbarConfig.sections.whyUs}>
-      <LinearGradientDesc />
+      <LinearGradientDesc/>
 
       <ScrollArrowUpPosition>
         <ScrollArrowUp
@@ -115,54 +123,75 @@ export default () => {
         />
       </ScrollArrowUpPosition>
 
-      <WhyUsTitle> Why us? </WhyUsTitle>
-
-      <WhyUsContent>
+      <Content>
         <WhyUsContentFlexLeft>Flawless Bits</WhyUsContentFlexLeft>
 
-        <WhyUsContentFlexRight>
+        <ContentRight>
+          <TitleWhyUs> Why us? </TitleWhyUs>
+
           <WhyUsTextContainer>
             <ArrowRightIconWrapper>
-              <ArrowRightIcon fontSize="inherit" />
+              <ArrowRightIcon fontSize="inherit"/>
             </ArrowRightIconWrapper>
-            <WhyUsText>
-              We collaborate only with experienced and mature software engineers.
-            </WhyUsText>
+            <Text>
+              We are experienced and mature software engineers.
+            </Text>
           </WhyUsTextContainer>
 
           <WhyUsTextContainer>
             <ArrowRightIconWrapper>
-              <ArrowRightIcon fontSize="inherit" />
+              <ArrowRightIcon fontSize="inherit"/>
             </ArrowRightIconWrapper>
-            <WhyUsText>
-              We write code for more than 10 years, we deliver fast.
-            </WhyUsText>
+            <Text>
+              We write code for more than 10 years.
+            </Text>
           </WhyUsTextContainer>
 
           <WhyUsTextContainer>
             <ArrowRightIconWrapper>
-              <ArrowRightIcon fontSize="inherit" />
+              <ArrowRightIcon fontSize="inherit"/>
             </ArrowRightIconWrapper>
-            <WhyUsText>
+            <Text>
               Many of us are also co-founders.
-            </WhyUsText>
+            </Text>
           </WhyUsTextContainer>
 
           <WhyUsTextContainer>
             <ArrowRightIconWrapper>
-              <ArrowRightIcon fontSize="inherit" />
+              <ArrowRightIcon fontSize="inherit"/>
             </ArrowRightIconWrapper>
-            <WhyUsText>Western Mindset</WhyUsText>
+            <Text>
+              We deliver fast.
+            </Text>
           </WhyUsTextContainer>
 
           <WhyUsTextContainer>
             <ArrowRightIconWrapper>
-              <ArrowRightIcon fontSize="inherit" />
+              <ArrowRightIcon fontSize="inherit"/>
             </ArrowRightIconWrapper>
-            <WhyUsText>Transparent.</WhyUsText>
+            <Text>Western Mindset</Text>
           </WhyUsTextContainer>
-        </WhyUsContentFlexRight>
-      </WhyUsContent>
+
+          <WhyUsTextContainer>
+            <ArrowRightIconWrapper>
+              <ArrowRightIcon fontSize="inherit"/>
+            </ArrowRightIconWrapper>
+            <Text>Transparent.</Text>
+          </WhyUsTextContainer>
+
+          <AboutUsTextContainer>
+            <TitleAboutUs>Who are we?</TitleAboutUs>
+
+            <Text /* eslint-disable */>
+              We are a group of closed friends and teammates who worked together on the same projects.
+              Our contribution helped top software companies in Cluj-Napoca evolve.
+              We know each other very well and decided to start our own business.
+            </Text>
+          </AboutUsTextContainer>
+
+        </ContentRight>
+
+      </Content>
 
       <ScrollArrowDownPosition>
         <ScrollArrowDown
