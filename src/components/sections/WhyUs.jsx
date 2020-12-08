@@ -24,11 +24,21 @@ const SectionWhyUs = styled.div`
   flex-direction: column;
 
   @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
-    padding: 70px 17% 20px 17%;
+    padding: 70px 17% 50px 17%;
   }
 `;
 
-const TitleWhyUs = styled.h2`
+const WhyUsTitle = styled.h2`
+  grid-area: grid-why-us-title;
+  
+  @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
+    text-align: center;
+  }
+`;
+
+const AboutUsTitle = styled.h2`
+  grid-area: grid-about-us-title;
+  
   text-align: right;
 
   @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
@@ -36,45 +46,45 @@ const TitleWhyUs = styled.h2`
   }
 `;
 
-const TitleAboutUs = styled.h2`
-  margin: 0 0 20px 0;
+const WhyUsContent = styled.div`
+  grid-area: grid-why-us-content;
 `;
 
-const Content = styled.div`
-  display: flex;
-  height: 100%;
-`;
-
-const WhyUsContentFlexLeft = styled.div`
-  opacity: 0.1;
-  text-orientation: mixed;
-  writing-mode: vertical-rl;
-  flex: 1;
-  font-size: 8em;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: ${stylesConfig.colors.blue};
+const AboutUsText = styled.div`
+  grid-area: grid-about-us-content;
+  margin: 30px 10px;
+  font-size: 20px;
+  line-height: 35px;
   letter-spacing: 2px;
-  z-index: -1;
-
+  
   @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    font-size: 70px;
+    margin: 10px 0;
+    text-align: center;
+    font-size: 10px;
+    letter-spacing: 1px;
+    line-height: 15px;
   }
 `;
 
-const ContentRight = styled.div`
-  flex: 1;
-  padding-top: 30px;
-
+const Content = styled.div`
+  height: 100%;
+  
+  display: grid;
+  grid-column-gap: 25px;
+  grid-row-gap: 70px;
+  grid-template-columns: auto auto;
+  
+  grid-template-areas: 
+  "grid-why-us-title grid-why-us-content"
+  "grid-about-us-content grid-about-us-title";
+  
   @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
-    padding-top: 10px;
+    grid-row-gap: 10px;
+    grid-template-areas: 
+    "grid-why-us-title"
+    "grid-why-us-content"
+    "grid-about-us-title"
+    "grid-about-us-content";
   }
 `;
 
@@ -89,30 +99,9 @@ const Text = styled.p`
   }
 `;
 
-const AboutUsText = styled.p`
-  font-size: 20px;
-  margin: 0;
-  line-height: 35px;
-  letter-spacing: 2px;
-
-  @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
-    font-size: 10px;
-    letter-spacing: 1px;
-    line-height: 15px;
-  }
-`;
-
 const WhyUsTextContainer = styled.div`
   display: flex;
   margin: 20px 0;
-`;
-
-const AboutUsTextContainer = styled.div`
-  margin: 30px 10px;
-  
-  @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
-    margin: 10px 0;
-  }
 `;
 
 const ArrowRightIconWrapper = styled.div`
@@ -141,10 +130,10 @@ export default () => {
       </ScrollArrowUpPosition>
 
       <Content>
-        <WhyUsContentFlexLeft>Flawless Bits</WhyUsContentFlexLeft>
 
-        <ContentRight>
-          <TitleWhyUs> Why us? </TitleWhyUs>
+        <WhyUsTitle> Why us? </WhyUsTitle>
+
+        <WhyUsContent>
 
           <WhyUsTextContainer>
             <ArrowRightIconWrapper>
@@ -196,21 +185,20 @@ export default () => {
             <Text>Transparent.</Text>
           </WhyUsTextContainer>
 
-          <AboutUsTextContainer>
-            <TitleAboutUs>Who are we?</TitleAboutUs>
+        </WhyUsContent>
 
-            <AboutUsText /* eslint-disable */>
-              We are a group of close friends and teammates located in Cluj-Napoca Romania.
-              We knew each other before, but also also while working for top software companies in Cluj county.
-              Our contribution left a strong footprint on the projects we were assigned.
-              The motivation to start our own business was triggered by following key aspects:
-              we can decide the projects that come in and fit best our technology stack,
-              we can still be teammates and we know for sure that our team is a match,
-              and there is also the financial aspect.
-            </AboutUsText>
-          </AboutUsTextContainer>
+        <AboutUsTitle>Who are we?</AboutUsTitle>
 
-        </ContentRight>
+        <AboutUsText /* eslint-disable */>
+          We are close friends, founders and tech people. We are located in Cluj-Napoca, Romania.
+          We know each other very well, and some of us were also teammates while working for
+          top software companies in the Cluj county.
+          Our contribution left a strong footprint on the projects we were assigned on.
+          The motivation to start our own business was triggered by the following key aspects:
+          the ability to choose future projects and not to be assigned on them,
+          being able to work together again as a team and we know for sure that our team is a match,
+          and of course, there is also the financial aspect.
+        </AboutUsText>
 
       </Content>
 

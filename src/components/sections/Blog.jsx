@@ -39,7 +39,7 @@ const BlogContainer = styled.div`
 
   @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
     margin: 30px 0 20px 0;
-    grid-template-columns: repeat(auto-fill, 400px);
+    grid-template-columns: repeat(auto-fill, 350px);
     grid-row-gap: 5px;
     grid-column-gap: 5px;
   }
@@ -81,7 +81,7 @@ const BlogCardWrapper = styled.a`
   
   @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) { 
     height: 250px;
-    width: 400px;
+    width: 350px;
   }
 `;
 

@@ -74,7 +74,7 @@ const HeaderSection = styled.div`
   justify-content: flex-start;
   
   @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
-    margin: 5px 0 0 0;
+    margin: 5px 0 5px 0;
   }
 `;
 
@@ -112,7 +112,6 @@ const Subtitle = styled.p`
   font-size: 15px;
 
   @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
-    margin: 5px 0 3px 0;
     font-size: 8px;
   }
 `;
