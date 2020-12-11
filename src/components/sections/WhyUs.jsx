@@ -52,7 +52,7 @@ const WhyUsContent = styled.div`
 
 const AboutUsText = styled.div`
   grid-area: grid-about-us-content;
-  margin: 30px 10px;
+  margin: 0 10px;
   font-size: 20px;
   line-height: 35px;
   letter-spacing: 2px;
@@ -70,7 +70,7 @@ const Content = styled.div`
   height: 100%;
   
   display: grid;
-  grid-column-gap: 25px;
+  grid-column-gap: 30px;
   grid-row-gap: 70px;
   grid-template-columns: auto auto;
   

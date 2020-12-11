@@ -1,9 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
+import { withRouter } from 'react-router-dom';
 
 import { LinearGradientDesc } from '../common/LinearGradient';
 import onScrollToHandler from '../../handlers/onScrollToHandler';
 import navbarConfig from '../../config/navbarConfig';
+import classLoadersSrc from '../../assets/blog/classLoaders.jpg';
 import blogUseContextAndReducerSrc from '../../assets/blog/blogUseContextAndReducer.png';
 import blogRestVsGraphQLSrc from '../../assets/blog/blogRestVsGraphQL.png';
 import {
@@ -50,15 +52,20 @@ const Title = styled.h2`
 `;
 
 const blogConfig = {
-  useContextAndReducer: {
-    title: 'Basic ReactJs Example with useContext() and useReducer() Hooks.',
-    imageSrc: blogUseContextAndReducerSrc,
-    link: 'https://medium.com/flawless-bits/reactjs-with-context-and-reducer-hooks-example-5f6189bf8882'
+  classLoadersJVM: {
+    title: 'Class Loaders and how they are used in JVM',
+    imageSrc: classLoadersSrc,
+    link: '/blog/class-loaders-and-how-they-are-used-in-jvm'
   },
   restVsGraphQL: {
     title: 'REST vs. GraphQL: A Critical Review.',
     imageSrc: blogRestVsGraphQLSrc,
-    link: 'https://medium.com/flawless-bits/rest-vs-graphql-a-critical-review-c86da2a18823'
+    link: '/blog/rest-vs-graphql'
+  },
+  useContextAndReducer: {
+    title: 'Basic ReactJs Example with useContext() and useReducer() Hooks.',
+    imageSrc: blogUseContextAndReducerSrc,
+    link: '/blog/reactjs-with-context-and-reducer-hooks-example'
   }
 };
 
@@ -68,6 +75,7 @@ const BlogCardWrapper = styled.a`
   cursor: pointer;
   display: flex;
   flex-direction: column;
+  text-decoration: none;
   justify-content: flex-end;
   background: url("${props => props.imageSrc}") no-repeat center top;
   background-size: contain;
@@ -80,7 +88,7 @@ const BlogCardWrapper = styled.a`
   }
   
   @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) { 
-    height: 250px;
+    height: 200px;
     width: 350px;
   }
 `;
@@ -109,11 +117,14 @@ const BlogCardTitle = styled.p`
   }
 `;
 
-const BlogCard = ({ imageSrc, title, link }) => {
+const BlogCard = withRouter(({ imageSrc, title, link, history }) => {
+  const onClick = () => {
+    history.push(link);
+  };
+
   return (
     <BlogCardWrapper
-      href={link}
-      target="_blank"
+      onClick={onClick}
       imageSrc={imageSrc}
     >
       <BlogCardContent>
@@ -121,7 +132,7 @@ const BlogCard = ({ imageSrc, title, link }) => {
       </BlogCardContent>
     </BlogCardWrapper>
   );
-};
+});
 
 const Blog = () => {
   const { onScrollTo } = onScrollToHandler();
@@ -132,7 +143,7 @@ const Blog = () => {
 
       <ScrollArrowUpPosition>
         <ScrollArrowUp
-          tooltipText="Go to Why Us"
+          tooltipText="Go to How it Works"
           onCallback={() => onScrollTo(navbarConfig.sections.howItWorks)}
         />
       </ScrollArrowUpPosition>
@@ -140,6 +151,7 @@ const Blog = () => {
       <Title>Blog.</Title>
 
       <BlogContainer>
+        <BlogCard {...blogConfig.classLoadersJVM}/>
         <BlogCard {...blogConfig.restVsGraphQL}/>
         <BlogCard {...blogConfig.useContextAndReducer}/>
       </BlogContainer>

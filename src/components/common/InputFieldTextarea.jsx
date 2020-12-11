@@ -14,7 +14,7 @@ const FormGroupNumericFieldStyles = {
   root: {
     borderRadius: '4px',
     border: 'solid 1px #dedede',
-    backgroundColor: '#ffff',
+    backgroundColor: 'transparent',
     fontSize: '15px',
     fontFamily: stylesConfig.fontFamily,
     padding: '10px 15px',

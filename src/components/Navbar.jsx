@@ -1,4 +1,6 @@
 import React, { useEffect } from 'react';
+import { withRouter } from 'react-router-dom';
+
 import debounce from 'lodash/debounce';
 import styled from 'styled-components';
 import logoSrc from '../assets/logo.png';
@@ -88,7 +90,12 @@ const NavbarMenuItem = ({ text, active, onCallback }) => {
   );
 };
 
-const getElementDistanceTop = (id) => document.getElementById(id).getBoundingClientRect().top;
+const getElementDistanceTop = (id) => {
+  if (!document.getElementById(id)) {
+    return 1;
+  }
+  return document.getElementById(id).getBoundingClientRect().top;
+};
 
 const getNavbarActive = () => {
   const proximityHeight = window.innerHeight / 3;
@@ -123,22 +130,34 @@ const getNavbarActive = () => {
   return false;
 };
 
-const Navbar = () => {
+const Navbar = (props) => {
   const globalContext = useGlobalState();
 
   const { onScrollTo } = onScrollToHandler();
 
   const { navbarActive } = globalContext.context;
 
-  const onScroll = debounce(() => {
-    const navbarActiveScrolled = getNavbarActive();
-
-    if (navbarActiveScrolled) {
+  const shouldSetNavbarActiveToBlog = () => {
+    if (props.location.pathname.startsWith('/blog')) {
       globalContext.setContext({
         ...globalContext.context,
-        navbarActive: navbarActiveScrolled,
+        navbarActive: navbarConfig.sections.blog,
       });
     }
+  };
+
+  const onScroll = debounce(() => {
+    if (props.location.pathname === '/') {
+      const navbarActiveScrolled = getNavbarActive();
+
+      if (navbarActiveScrolled) {
+        globalContext.setContext({
+          ...globalContext.context,
+          navbarActive: navbarActiveScrolled,
+        });
+      }
+    }
+    shouldSetNavbarActiveToBlog();
   }, 50);
 
   useEffect(() => {
@@ -146,42 +165,89 @@ const Navbar = () => {
     return () => {
       window.removeEventListener('scroll', onScroll);
     };
+  }, [props.location.pathname]);
+
+  useEffect(() => {
+    shouldSetNavbarActiveToBlog();
   }, []);
 
-  const onScrollToVision = () => {
-    onScrollTo(navbarConfig.sections.vision);
+  const goHome = () => {
+    if (props.location.pathname !== '/') {
+      props.history.push('/');
+      setTimeout(() => {
+        onScrollTo(navbarConfig.sections.vision);
+      }, 100);
+    } else {
+      onScrollTo(navbarConfig.sections.vision);
+    }
   };
 
   const onScrollToWhyUs = () => {
-    onScrollTo(navbarConfig.sections.whyUs);
+    if (props.location.pathname !== '/') {
+      props.history.push('/');
+      setTimeout(() => {
+        onScrollTo(navbarConfig.sections.whyUs);
+      }, 100);
+    } else {
+      onScrollTo(navbarConfig.sections.whyUs);
+    }
   };
 
   const onScrollToOurTeam = () => {
-    onScrollTo(navbarConfig.sections.ourTeam);
+    if (props.location.pathname !== '/') {
+      props.history.push('/');
+      setTimeout(() => {
+        onScrollTo(navbarConfig.sections.ourTeam);
+      }, 100);
+    } else {
+      onScrollTo(navbarConfig.sections.ourTeam);
+    }
   };
 
   const onScrollToHowItWorks = () => {
-    onScrollTo(navbarConfig.sections.howItWorks);
+    if (props.location.pathname !== '/') {
+      props.history.push('/');
+      setTimeout(() => {
+        onScrollTo(navbarConfig.sections.howItWorks);
+      }, 100);
+    } else {
+      onScrollTo(navbarConfig.sections.howItWorks);
+    }
   };
 
   const onScrollToBlog = () => {
-    onScrollTo(navbarConfig.sections.blog);
+    if (props.location.pathname !== '/') {
+      props.history.push('/');
+      setTimeout(() => {
+        onScrollTo(navbarConfig.sections.blog);
+      }, 100);
+    } else {
+      onScrollTo(navbarConfig.sections.blog);
+    }
   };
 
   const onScrollToContactUs = () => {
-    onScrollTo(navbarConfig.sections.contactUs);
+    if (props.location.pathname !== '/') {
+      props.history.push('/');
+      setTimeout(() => {
+        onScrollTo(navbarConfig.sections.contactUs);
+      }, 100);
+    } else {
+      onScrollTo(navbarConfig.sections.contactUs);
+    }
   };
 
   return (
     <NavbarWrapper>
-      <NavbarLogoAndTitleWrapper onClick={onScrollToVision}>
+      <NavbarLogoAndTitleWrapper onClick={goHome}>
         <NavbarLogo src={logoSrc}/>
         <NavbarTitle>Flawless Bits</NavbarTitle>
       </NavbarLogoAndTitleWrapper>
       <NavbarMenuItemsWrapper>
+
         <NavbarMenuItem
           active={navbarActive === navbarConfig.sections.vision}
-          onCallback={onScrollToVision}
+          onCallback={goHome}
           text="VISION"
         />
         <NavbarMenuItem
@@ -209,9 +275,10 @@ const Navbar = () => {
           onCallback={onScrollToContactUs}
           text="CONTACT US"
         />
+
       </NavbarMenuItemsWrapper>
     </NavbarWrapper>
   );
 };
 
-export default Navbar;
+export default withRouter(Navbar);

@@ -21,7 +21,7 @@ const FormGroupNumericFieldStyles = {
   root: {
     borderRadius: '4px',
     border: 'none',
-    backgroundColor: 'white',
+    backgroundColor: 'transparent',
     padding: '0 0 5px 0',
     fontWeight: 'normal',
     fontStyle: 'normal',

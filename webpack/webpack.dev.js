@@ -5,6 +5,7 @@ const commonPaths = require('./paths');
 module.exports = {
   mode: 'development',
   output: {
+    publicPath: '/',
     filename: '[name].js',
     path: commonPaths.outputPath,
     chunkFilename: '[name].js',
@@ -24,6 +25,7 @@ module.exports = {
     contentBase: commonPaths.outputPath,
     compress: true,
     hot: true,
+    historyApiFallback: true
   },
   plugins: [new webpack.HotModuleReplacementPlugin()],
 };

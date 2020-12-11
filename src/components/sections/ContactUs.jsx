@@ -35,6 +35,7 @@ const SES = new AWS.SES({
 const Section = styled.div`
   position: relative;
   border-top: 2px solid ${stylesConfig.colors.graySection};
+  background-color: rgba(16, 88, 249, 0.03);
   min-height: 100%;
   padding: 90px 0 0 0;
   display: flex;
@@ -271,8 +272,8 @@ const ContactUs = () => {
 
         <ScrollArrowUpPosition>
           <ScrollArrowUp
-            tooltipText="Go to How It Works"
-            onCallback={() => onScrollTo(navbarConfig.sections.howItWorks)}
+            tooltipText="Go to Blog"
+            onCallback={() => onScrollTo(navbarConfig.sections.blog)}
           />
         </ScrollArrowUpPosition>
 
