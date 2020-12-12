@@ -98,15 +98,16 @@ const BlogCardWrapper = styled.a`
 const BlogCardContent = styled.div`
   margin: 0;
   height: fit-content;
-  min-height: 100px;
-  background: #ffffffbf;
+  min-height: 90px;
+  background: #ffffffc7;
   padding: 8px 20px;
   display: flex;
   flex-direction: column;
-  padding: 10px;
+  padding: 15px;
 
   @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
     min-height: 60px;
+    padding: 10px;
   }
 `;
 
@@ -126,14 +127,12 @@ const BlogCardTitle = styled.p`
 
 const BlogCardSubTitle = styled.p`
   margin: 10px 0 0 0;
-  font-size: 12px;
-  letter-spacing: 2px;
+  font-size: 14px;
   text-align: center;
 
   @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
     font-size: 8px;
     margin: 5px 0 0 0;
-    letter-spacing: 1px;
   }
 `;
 
