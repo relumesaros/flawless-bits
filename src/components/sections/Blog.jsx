@@ -35,14 +35,14 @@ const BlogContainer = styled.div`
   margin: 60px 0 20px 0;
   display: grid;
   grid-column-gap: 15px;
-  grid-row-gap: 70px;
+  grid-row-gap: 80px;
   grid-template-columns: repeat(auto-fit, 500px);
   justify-content: center;
 
   @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
     margin: 30px 0 20px 0;
     grid-template-columns: repeat(auto-fill, 350px);
-    grid-row-gap: 20px;
+    grid-row-gap: 25px;
   }
 `;
 
