@@ -60,7 +60,7 @@ export const Text = styled.p`
   margin: 5px 0; 
   letter-spacing: 2px;
   line-height: 25px;
-  font-size: 15px;
+  font-size: 18px;
   
   @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
     letter-spacing: 1px;

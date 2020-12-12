@@ -142,7 +142,7 @@ export default withRouter(props => {
       <br/>
 
       <TitleH3>
-        How do Class Loaders work ?
+        How do Class Loaders work?
       </TitleH3>
 
       <br/>

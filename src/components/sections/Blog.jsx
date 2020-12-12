@@ -42,8 +42,7 @@ const BlogContainer = styled.div`
   @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
     margin: 30px 0 20px 0;
     grid-template-columns: repeat(auto-fill, 350px);
-    grid-row-gap: 5px;
-    grid-column-gap: 5px;
+    grid-row-gap: 20px;
   }
 `;
 
@@ -54,16 +53,19 @@ const Title = styled.h2`
 const blogConfig = {
   classLoadersJVM: {
     title: 'Class Loaders and how they are used in JVM',
+    subTitle: 'What are the Class Loaders and how they are used in JVM? After reading this you will know the differences between Class Loader, Bootstrap Class Loader, Extensions Class Loader and System Class Loader.',
     imageSrc: classLoadersSrc,
     link: '/blog/class-loaders-and-how-they-are-used-in-jvm'
   },
   restVsGraphQL: {
     title: 'REST vs. GraphQL: A Critical Review.',
+    subTitle: 'Deciding between using GraphQL and REST can always be a tough decision, so we’re gonna show the Pros and Cons of using each.',
     imageSrc: blogRestVsGraphQLSrc,
     link: '/blog/rest-vs-graphql'
   },
   useContextAndReducer: {
     title: 'Basic ReactJs Example with useContext() and useReducer() Hooks.',
+    subTitle: 'State management can always be problematic and Redux came up with a really good solution for this. But Redux can now be evaded and you can resort to ReactJS native hooks: useReducer() and useContext().',
     imageSrc: blogUseContextAndReducerSrc,
     link: '/blog/reactjs-with-context-and-reducer-hooks-example'
   }
@@ -96,9 +98,11 @@ const BlogCardWrapper = styled.a`
 const BlogCardContent = styled.div`
   margin: 0;
   height: fit-content;
-  min-height: 70px;
+  min-height: 110px;
   background: #ffffffbf;
   padding: 8px 20px;
+  display: flex;
+  flex-direction: column;
 
   @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
     min-height: 60px;
@@ -106,18 +110,33 @@ const BlogCardContent = styled.div`
 `;
 
 const BlogCardTitle = styled.p`
+  margin: 10px 0 0 0;
   font-weight: 700;
   font-size: 15px;
   letter-spacing: 2px;
   text-align: center;
 
   @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
+    margin: 5px 0 0 0;
     font-size: 10px;
     letter-spacing: 1px;
   }
 `;
 
-const BlogCard = withRouter(({ imageSrc, title, link, history }) => {
+const BlogCardSubTitle = styled.p`
+  margin: 10px 0 0 0;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-align: center;
+
+  @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
+    font-size: 8px;
+    margin: 5px 0 0 0;
+    letter-spacing: 1px;
+  }
+`;
+
+const BlogCard = withRouter(({ imageSrc, title, subTitle, link, history }) => {
   const onClick = () => {
     history.push(link);
   };
@@ -129,6 +148,7 @@ const BlogCard = withRouter(({ imageSrc, title, link, history }) => {
     >
       <BlogCardContent>
         <BlogCardTitle>{title}</BlogCardTitle>
+        <BlogCardSubTitle>{subTitle}</BlogCardSubTitle>
       </BlogCardContent>
     </BlogCardWrapper>
   );
