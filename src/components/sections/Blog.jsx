@@ -67,7 +67,7 @@ const blogConfig = {
     title: 'Basic ReactJs Example with useContext() and useReducer() Hooks.',
     subTitle: 'State management can always be problematic and Redux came up with a really good solution for this. But Redux can now be evaded and you can resort to ReactJS native hooks: useReducer() and useContext().',
     imageSrc: blogUseContextAndReducerSrc,
-    link: '/blog/reactjs-with-context-and-reducer-hooks-example'
+    link: '/blog/reactjs-with-usecontext-and-usereducer-hooks-example'
   }
 };
 

@@ -33,7 +33,7 @@ export default function App() {
         <Navbar/>
         <SwitchWrapper>
           <Switch>
-            <Route exact path="/blog/reactjs-with-context-and-reducer-hooks-example">
+            <Route exact path="/blog/reactjs-with-usecontext-and-usereducer-hooks-example">
               <div>
                 <UseContextAndUseReducer/>
                 <Footer/>
