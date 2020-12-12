@@ -35,7 +35,7 @@ const BlogContainer = styled.div`
   margin: 60px 0 20px 0;
   display: grid;
   grid-column-gap: 15px;
-  grid-row-gap: 80px;
+  grid-row-gap: 60px;
   grid-template-columns: repeat(auto-fit, 500px);
   justify-content: center;
 
