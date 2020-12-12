@@ -98,11 +98,12 @@ const BlogCardWrapper = styled.a`
 const BlogCardContent = styled.div`
   margin: 0;
   height: fit-content;
-  min-height: 110px;
+  min-height: 100px;
   background: #ffffffbf;
   padding: 8px 20px;
   display: flex;
   flex-direction: column;
+  padding: 10px;
 
   @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
     min-height: 60px;
@@ -110,7 +111,7 @@ const BlogCardContent = styled.div`
 `;
 
 const BlogCardTitle = styled.p`
-  margin: 10px 0 0 0;
+  margin: 0;
   font-weight: 700;
   font-size: 15px;
   letter-spacing: 2px;
