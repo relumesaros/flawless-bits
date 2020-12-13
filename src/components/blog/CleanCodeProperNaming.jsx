@@ -13,7 +13,7 @@ import {
   HorizontalLine,
   IconWrapper,
   Image,
-  ListItem, ListItem2,
+  ListItem,
   Section, Subtitle, Text, TextStrong,
   TitleH2,
   TitleH3
@@ -58,8 +58,8 @@ export default withRouter(props => {
       <br/>
 
       <Subtitle>
-        Deciding between using GraphQL and REST can always be a tough decision, so we’re gonna show the Pros and Cons of
-        using each.
+        Proper Naming is Hard and it takes years of development to really understand the power and importance of
+        expressing Real Intent.
       </Subtitle>
 
       <br/>

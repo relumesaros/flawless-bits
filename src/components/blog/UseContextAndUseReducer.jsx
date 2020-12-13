@@ -47,7 +47,7 @@ export default withRouter(props => {
       <LinearGradientDesc/>
 
       <TitleH2>
-        Basic ReactJs Example with useContext and useReducer Hooks
+        Basic ReactJs Example with useContext and useReducer Hooks.
       </TitleH2>
 
       <br/>

@@ -59,7 +59,7 @@ const blogConfig = {
     link: '/blog/clean-code-proper-naming'
   },
   classLoadersJVM: {
-    title: 'Class Loaders and how they are used in JVM',
+    title: 'Class Loaders and how they are used in JVM.',
     subTitle: 'What are the Class Loaders and how they are used in JVM? After reading this you will know the differences between Class Loader, Bootstrap Class Loader, Extensions Class Loader and System Class Loader.',
     imageSrc: classLoadersSrc,
     link: '/blog/class-loaders-and-how-they-are-used-in-jvm'
