@@ -5,7 +5,8 @@ import { withRouter } from 'react-router-dom';
 import { LinearGradientDesc } from '../common/LinearGradient';
 import onScrollToHandler from '../../handlers/onScrollToHandler';
 import navbarConfig from '../../config/navbarConfig';
-import classLoadersSrc from '../../assets/blog/classLoaders.jpg';
+import classLoadersSrc from '../../assets/blog/blogClassLoaders.jpg';
+import blogCleanCodeProperNamingSrc from '../../assets/blog/blogCleanCodeProperNaming.png';
 import blogUseContextAndReducerSrc from '../../assets/blog/blogUseContextAndReducer.png';
 import blogRestVsGraphQLSrc from '../../assets/blog/blogRestVsGraphQL.png';
 import {
@@ -51,6 +52,12 @@ const Title = styled.h2`
 `;
 
 const blogConfig = {
+  cleanCodeProperNaming: {
+    title: 'Writing Clean Code. Proper Naming for variables, methods and classes.',
+    subTitle: 'Proper Naming is Hard and it takes years of development to really understand the power and importance of expressing Real Intent.',
+    imageSrc: blogCleanCodeProperNamingSrc,
+    link: '/blog/clean-code-proper-naming'
+  },
   classLoadersJVM: {
     title: 'Class Loaders and how they are used in JVM',
     subTitle: 'What are the Class Loaders and how they are used in JVM? After reading this you will know the differences between Class Loader, Bootstrap Class Loader, Extensions Class Loader and System Class Loader.',
@@ -171,6 +178,7 @@ const Blog = () => {
       <Title>Blog.</Title>
 
       <BlogContainer>
+        <BlogCard {...blogConfig.cleanCodeProperNaming}/>
         <BlogCard {...blogConfig.classLoadersJVM}/>
         <BlogCard {...blogConfig.restVsGraphQL}/>
         <BlogCard {...blogConfig.useContextAndReducer}/>

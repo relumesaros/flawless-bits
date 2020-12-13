@@ -13,7 +13,7 @@ import {
   HorizontalLine,
   IconWrapper,
   Image,
-  Link, ListItem,
+  Link, ListItem, ListItemStrong,
   Pre,
   Section,
   Subtitle,
@@ -69,13 +69,15 @@ export default withRouter(props => {
       </Subtitle>
 
       <br/>
+      <HorizontalLine/>
+      <br/>
 
       <Text><strong>Components:</strong></Text>
 
-      <ListItem>ContextProvider.jsx</ListItem>
-      <ListItem>Navbar.jsx</ListItem>
-      <ListItem>Home.jsx</ListItem>
-      <ListItem>App.jsx</ListItem>
+      <ListItemStrong>ContextProvider.jsx</ListItemStrong>
+      <ListItemStrong>Navbar.jsx</ListItemStrong>
+      <ListItemStrong>Home.jsx</ListItemStrong>
+      <ListItemStrong>App.jsx</ListItemStrong>
 
       <HorizontalLine/>
 
@@ -91,7 +93,7 @@ export default withRouter(props => {
 
       <HorizontalLine/>
 
-      <ListItem>ContextProvider.jsx</ListItem>
+      <ListItemStrong>ContextProvider.jsx</ListItemStrong>
       <br/>
 
       <Pre>{
@@ -139,7 +141,7 @@ export default withRouter(props => {
       <br/>
       <br/>
 
-      <ListItem>Navbar.jsx</ListItem>
+      <ListItemStrong>Navbar.jsx</ListItemStrong>
       <br/>
 
       <Pre>{
@@ -192,7 +194,7 @@ export default withRouter(props => {
       <br/>
       <br/>
 
-      <ListItem>Home.jsx</ListItem>
+      <ListItemStrong>Home.jsx</ListItemStrong>
       <br/>
 
       <Pre>{
@@ -228,7 +230,7 @@ export default withRouter(props => {
       <br/>
       <br/>
 
-      <ListItem>App.jsx</ListItem>
+      <ListItemStrong>App.jsx</ListItemStrong>
       <br/>
 
       <Pre>{

@@ -7,6 +7,7 @@ import stylesConfig from '../config/stylesConfig';
 import UseContextAndUseReducer from './blog/UseContextAndUseReducer';
 import RestVsGraphQL from './blog/RestVsGraphQL';
 import ClassLoadersAndHowTheyAreUsedInJvm from './blog/ClassLoadersAndHowTheyAreUsedInJvm';
+import CleanCodeProperNaming from './blog/CleanCodeProperNaming';
 import Footer from './common/Footer';
 
 const RouterContentWrapper = styled.div`
@@ -54,6 +55,12 @@ export default function App() {
             <Route exact path="/blog/class-loaders-and-how-they-are-used-in-jvm">
               <div>
                 <ClassLoadersAndHowTheyAreUsedInJvm/>
+                <Footer/>
+              </div>
+            </Route>
+            <Route exact path="/blog/clean-code-proper-naming">
+              <div>
+                <CleanCodeProperNaming/>
                 <Footer/>
               </div>
             </Route>

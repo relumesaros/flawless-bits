@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import { withRouter } from 'react-router-dom';
 import CloseIcon from '@material-ui/icons/Close';
 
-import classLoadersSrc from '../../assets/blog/classLoaders.jpg';
+import classLoadersSrc from '../../assets/blog/blogClassLoaders.jpg';
 import { LinearGradientDesc } from "../common/LinearGradient";
 import navbarConfig from "../../config/navbarConfig";
 import onScrollToHandler from "../../handlers/onScrollToHandler";
@@ -12,7 +12,7 @@ import {
   HorizontalLine,
   IconWrapper,
   Image,
-  ListItem,
+  ListItemStrong,
   Section, Subtitle, Text,
   TitleH2,
   TitleH3
@@ -106,9 +106,9 @@ export default withRouter(props => {
 
       <Text>When JVM is started, 3 class loaders are used:</Text>
 
-      <ListItem>Bootstrap Class Loader</ListItem>
-      <ListItem>Extensions Class Loader</ListItem>
-      <ListItem>System Class Loader</ListItem>
+      <ListItemStrong>Bootstrap Class Loader</ListItemStrong>
+      <ListItemStrong>Extensions Class Loader</ListItemStrong>
+      <ListItemStrong>System Class Loader</ListItemStrong>
 
       <br/>
 

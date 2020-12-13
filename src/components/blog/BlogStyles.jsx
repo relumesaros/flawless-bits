@@ -69,6 +69,10 @@ export const Text = styled.p`
   }
 `;
 
+export const TextStrong = styled(Text)`
+  font-weight: bold;
+`;
+
 export const Pre = styled.pre`
   background-color: rgb(242, 242, 242);
   overflow: auto;
@@ -94,6 +98,15 @@ export const ListItemDash = styled.div`
 `;
 
 export const ListItem = ({ children }) => {
+  return (
+    <ListItemWrapper>
+      <ListItemDash>-</ListItemDash>
+      <Text>{children}</Text>
+    </ListItemWrapper>
+  );
+};
+
+export const ListItemStrong = ({ children }) => {
   return (
     <ListItemWrapper>
       <ListItemDash>-</ListItemDash>
