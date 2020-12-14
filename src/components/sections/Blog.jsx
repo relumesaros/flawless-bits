@@ -51,30 +51,30 @@ const Title = styled.h2`
   text-align: center;
 `;
 
-const blogConfig = {
+export const blogConfig = {
   cleanCodeProperNaming: {
     title: 'Writing Clean Code. Proper Naming for variables, methods and classes.',
     subTitle: 'Proper Naming is Hard and it takes years of development to really understand the power and importance of expressing Real Intent.',
     imageSrc: blogCleanCodeProperNamingSrc,
-    link: '/blog/clean-code-proper-naming'
+    link: 'blog/clean-code-proper-naming'
   },
   classLoadersJVM: {
     title: 'Class Loaders and how they are used in JVM.',
     subTitle: 'What are the Class Loaders and how they are used in JVM? After reading this you will know the differences between Class Loader, Bootstrap Class Loader, Extensions Class Loader and System Class Loader.',
     imageSrc: classLoadersSrc,
-    link: '/blog/class-loaders-and-how-they-are-used-in-jvm'
+    link: 'blog/class-loaders-and-how-they-are-used-in-jvm'
   },
   restVsGraphQL: {
     title: 'REST vs. GraphQL: A Critical Review.',
     subTitle: 'Deciding between using GraphQL and REST can always be a tough decision, so we’re gonna show the Pros and Cons of using each.',
     imageSrc: blogRestVsGraphQLSrc,
-    link: '/blog/rest-vs-graphql'
+    link: 'blog/rest-vs-graphql'
   },
   useContextAndReducer: {
     title: 'Basic ReactJs Example with useContext() and useReducer() Hooks.',
     subTitle: 'State management can always be problematic and Redux came up with a really good solution for this. But Redux can now be evaded and you can resort to ReactJS native hooks: useReducer() and useContext().',
     imageSrc: blogUseContextAndReducerSrc,
-    link: '/blog/reactjs-with-usecontext-and-usereducer-hooks-example'
+    link: 'blog/reactjs-with-usecontext-and-usereducer-hooks-example'
   }
 };
 
@@ -145,7 +145,7 @@ const BlogCardSubTitle = styled.p`
 
 const BlogCard = withRouter(({ imageSrc, title, subTitle, link, history }) => {
   const onClick = () => {
-    history.push(link);
+    history.push(`/${link}`);
   };
 
   return (

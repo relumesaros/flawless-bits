@@ -7,6 +7,7 @@ import OurTeam from './sections/OurTeam';
 import ContactUs from './sections/ContactUs';
 import stylesConfig from '../config/stylesConfig';
 import Blog from './sections/Blog';
+import MetaMain from './meta/MetaMain';
 
 const HomeWrapper = styled.div`
   height: 100%;
@@ -16,17 +17,19 @@ const HomeWrapper = styled.div`
 const Main = () => {
   return (
     <HomeWrapper>
-      <Vision />
+      <MetaMain/>
 
-      <WhyUs />
+      <Vision/>
 
-      <OurTeam />
+      <WhyUs/>
 
-      <HowItWorks />
+      <OurTeam/>
 
-      <Blog />
+      <HowItWorks/>
 
-      <ContactUs />
+      <Blog/>
+
+      <ContactUs/>
     </HomeWrapper>
   );
 };

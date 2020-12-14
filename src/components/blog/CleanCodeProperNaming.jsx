@@ -18,6 +18,8 @@ import {
   TitleH2,
   TitleH3
 } from "./BlogStyles";
+import { blogConfig } from "../sections/Blog";
+import MetaBlog from "../meta/MetaBlog";
 
 export default withRouter(props => {
 
@@ -36,6 +38,14 @@ export default withRouter(props => {
 
   return (
     <Section>
+
+      <MetaBlog
+        title={blogConfig.cleanCodeProperNaming.title}
+        subTitle={blogConfig.cleanCodeProperNaming.subTitle}
+        link={blogConfig.cleanCodeProperNaming.link}
+        s3imageBucketPath={'blog/blogCleanCodeProperNaming.png'}
+      />
+
       <CloseButton>
         <IconWrapper onClick={onGoBackClick}>
           <CloseIcon fontSize='inherit'/>

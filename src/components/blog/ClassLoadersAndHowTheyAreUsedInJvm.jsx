@@ -1,5 +1,6 @@
 /* eslint-disable */
 import React, { useEffect } from 'react';
+import MetaTags, { ReactTitle } from 'react-meta-tags';
 import { withRouter } from 'react-router-dom';
 import CloseIcon from '@material-ui/icons/Close';
 
@@ -17,6 +18,8 @@ import {
   TitleH2,
   TitleH3
 } from "./BlogStyles";
+import { blogConfig } from "../sections/Blog";
+import MetaBlog from "../meta/MetaBlog";
 
 export default withRouter(props => {
 
@@ -33,7 +36,15 @@ export default withRouter(props => {
     }, 100);
   };
 
-  return (<Section>
+  return (
+    <Section>
+      <MetaBlog
+        title={blogConfig.classLoadersJVM.title}
+        subTitle={blogConfig.classLoadersJVM.subTitle}
+        link={blogConfig.classLoadersJVM.link}
+        s3imageBucketPath={'blog/blogClassLoaders.jpg'}
+      />
+
       <CloseButton>
         <IconWrapper onClick={onGoBackClick}>
           <CloseIcon fontSize='inherit'/>

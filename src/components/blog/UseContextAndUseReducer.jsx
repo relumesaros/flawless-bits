@@ -13,13 +13,16 @@ import {
   HorizontalLine,
   IconWrapper,
   Image,
-  Link, ListItem, ListItemStrong,
+  Link,
+  ListItemStrong,
   Pre,
   Section,
   Subtitle,
   Text,
   TitleH2
 } from "./BlogStyles";
+import { blogConfig } from "../sections/Blog";
+import MetaBlog from "../meta/MetaBlog";
 
 export default withRouter(props => {
 
@@ -38,6 +41,14 @@ export default withRouter(props => {
 
   return (
     <Section>
+
+      <MetaBlog
+        title={blogConfig.useContextAndReducer.title}
+        subTitle={blogConfig.useContextAndReducer.subTitle}
+        link={blogConfig.useContextAndReducer.link}
+        s3imageBucketPath={'blog/blogUseContextAndReducer.png'}
+      />
+
       <CloseButton>
         <IconWrapper onClick={onGoBackClick}>
           <CloseIcon fontSize='inherit'/>
