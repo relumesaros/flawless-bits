@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import { withRouter } from 'react-router-dom';
 import CloseIcon from '@material-ui/icons/Close';
 
-import blogCleanCodeProperNamingSrc from '../../assets/blog/blogCleanCodeProperNaming.png';
+import blogCleanCodeProperNamingSrc from '../../assets/blog/cleanCodeProperNaming.png';
 import thatsAllFolksSrc from '../../assets/blog/thatsAllFolks.png';
 import { LinearGradientDesc } from "../common/LinearGradient";
 import navbarConfig from "../../config/navbarConfig";
@@ -18,7 +18,7 @@ import {
   TitleH2,
   TitleH3
 } from "./BlogStyles";
-import { blogConfig } from "../sections/Blog";
+import blogConfig  from "../../config/blogConfig.json";
 import MetaBlog from "../meta/MetaBlog";
 
 export default withRouter(props => {
@@ -43,7 +43,7 @@ export default withRouter(props => {
         title={blogConfig.cleanCodeProperNaming.title}
         subTitle={blogConfig.cleanCodeProperNaming.subTitle}
         link={blogConfig.cleanCodeProperNaming.link}
-        s3imageBucketPath={'blog/blogCleanCodeProperNaming.png'}
+        s3imageBucketPath={blogConfig.cleanCodeProperNaming.imageSrc}
       />
 
       <CloseButton>

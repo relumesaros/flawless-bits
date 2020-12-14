@@ -5,10 +5,12 @@ import { withRouter } from 'react-router-dom';
 import { LinearGradientDesc } from '../common/LinearGradient';
 import onScrollToHandler from '../../handlers/onScrollToHandler';
 import navbarConfig from '../../config/navbarConfig';
-import classLoadersSrc from '../../assets/blog/blogClassLoaders.jpg';
-import blogCleanCodeProperNamingSrc from '../../assets/blog/blogCleanCodeProperNaming.png';
-import blogUseContextAndReducerSrc from '../../assets/blog/blogUseContextAndReducer.png';
-import blogRestVsGraphQLSrc from '../../assets/blog/blogRestVsGraphQL.png';
+import blogConfig from '../../config/blogConfig.json';
+
+import classLoadersSrc from '../../assets/blog/classLoaders.jpg';
+import blogCleanCodeProperNamingSrc from '../../assets/blog/cleanCodeProperNaming.png';
+import blogUseContextAndReducerSrc from '../../assets/blog/useContextAndReducer.png';
+import blogRestVsGraphQLSrc from '../../assets/blog/restVsGraphQL.png';
 import {
   ScrollArrowDown,
   ScrollArrowDownPosition,
@@ -50,33 +52,6 @@ const BlogContainer = styled.div`
 const Title = styled.h2`
   text-align: center;
 `;
-
-export const blogConfig = {
-  cleanCodeProperNaming: {
-    title: 'Writing Clean Code. Proper Naming for variables, methods and classes.',
-    subTitle: 'Proper Naming is Hard and it takes years of development to really understand the power and importance of expressing Real Intent.',
-    imageSrc: blogCleanCodeProperNamingSrc,
-    link: 'blog/clean-code-proper-naming'
-  },
-  classLoadersJVM: {
-    title: 'Class Loaders and how they are used in JVM.',
-    subTitle: 'What are the Class Loaders and how they are used in JVM? After reading this you will know the differences between Class Loader, Bootstrap Class Loader, Extensions Class Loader and System Class Loader.',
-    imageSrc: classLoadersSrc,
-    link: 'blog/class-loaders-and-how-they-are-used-in-jvm'
-  },
-  restVsGraphQL: {
-    title: 'REST vs. GraphQL: A Critical Review.',
-    subTitle: 'Deciding between using GraphQL and REST can always be a tough decision, so we’re gonna show the Pros and Cons of using each.',
-    imageSrc: blogRestVsGraphQLSrc,
-    link: 'blog/rest-vs-graphql'
-  },
-  useContextAndReducer: {
-    title: 'Basic ReactJs Example with useContext() and useReducer() Hooks.',
-    subTitle: 'State management can always be problematic and Redux came up with a really good solution for this. But Redux can now be evaded and you can resort to ReactJS native hooks: useReducer() and useContext().',
-    imageSrc: blogUseContextAndReducerSrc,
-    link: 'blog/reactjs-with-usecontext-and-usereducer-hooks-example'
-  }
-};
 
 const BlogCardWrapper = styled.a`
   height: 300px;
@@ -178,10 +153,30 @@ const Blog = () => {
       <Title>Blog.</Title>
 
       <BlogContainer>
-        <BlogCard {...blogConfig.cleanCodeProperNaming}/>
-        <BlogCard {...blogConfig.classLoadersJVM}/>
-        <BlogCard {...blogConfig.restVsGraphQL}/>
-        <BlogCard {...blogConfig.useContextAndReducer}/>
+        <BlogCard
+          title={blogConfig.cleanCodeProperNaming.title}
+          subTitle={blogConfig.cleanCodeProperNaming.subTitle}
+          link={blogConfig.cleanCodeProperNaming.link}
+          imageSrc={blogCleanCodeProperNamingSrc}
+        />
+        <BlogCard
+          title={blogConfig.classLoadersAndHowTheyAreUsedInJvm.title}
+          subTitle={blogConfig.classLoadersAndHowTheyAreUsedInJvm.subTitle}
+          link={blogConfig.classLoadersAndHowTheyAreUsedInJvm.link}
+          imageSrc={classLoadersSrc}
+        />
+        <BlogCard
+          title={blogConfig.restVsGraphql.title}
+          subTitle={blogConfig.restVsGraphql.subTitle}
+          link={blogConfig.restVsGraphql.link}
+          imageSrc={blogRestVsGraphQLSrc}
+        />
+        <BlogCard
+          title={blogConfig.reactjsWithUsecontextAndUsereducerHooksExample.title}
+          subTitle={blogConfig.reactjsWithUsecontextAndUsereducerHooksExample.subTitle}
+          link={blogConfig.reactjsWithUsecontextAndUsereducerHooksExample.link}
+          imageSrc={blogUseContextAndReducerSrc}
+        />
       </BlogContainer>
 
       <ScrollArrowDownPosition>

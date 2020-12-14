@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import { withRouter } from 'react-router-dom';
 import CloseIcon from '@material-ui/icons/Close';
 
-import blogUseContextAndReducerSrc from '../../assets/blog/blogUseContextAndReducer.png';
+import blogUseContextAndReducerSrc from '../../assets/blog/useContextAndReducer.png';
 import thatsAllFolksSrc from '../../assets/blog/thatsAllFolks.png';
 import { LinearGradientDesc } from "../common/LinearGradient";
 import navbarConfig from "../../config/navbarConfig";
@@ -21,7 +21,7 @@ import {
   Text,
   TitleH2
 } from "./BlogStyles";
-import { blogConfig } from "../sections/Blog";
+import blogConfig  from "../../config/blogConfig.json";
 import MetaBlog from "../meta/MetaBlog";
 
 export default withRouter(props => {
@@ -43,10 +43,10 @@ export default withRouter(props => {
     <Section>
 
       <MetaBlog
-        title={blogConfig.useContextAndReducer.title}
-        subTitle={blogConfig.useContextAndReducer.subTitle}
-        link={blogConfig.useContextAndReducer.link}
-        s3imageBucketPath={'blog/blogUseContextAndReducer.png'}
+        title={blogConfig.reactjsWithUsecontextAndUsereducerHooksExample.title}
+        subTitle={blogConfig.reactjsWithUsecontextAndUsereducerHooksExample.subTitle}
+        link={blogConfig.reactjsWithUsecontextAndUsereducerHooksExample.link}
+        s3imageBucketPath={blogConfig.reactjsWithUsecontextAndUsereducerHooksExample.imageSrc}
       />
 
       <CloseButton>

@@ -1,17 +1,18 @@
 import React from 'react';
-import MetaTags, { ReactTitle } from 'react-meta-tags';
+import { Helmet } from 'react-helmet';
 
 export default () => {
   return (
-    <MetaTags>
+    <Helmet>
+      <title>Flawless Bits</title>
+
       {/* Primary Meta Tags */}
-      <ReactTitle title="Flawless Bits"/>
 
       <meta
         name="description"
         content="Flawless Bits is a startup outsourcing company that builds web-based applications for organizations looking to be more efficient, grow and serve their customers better."
       />
-      <meta property="og:title" content="Magic Title"/>
+      <meta property="og:title" content="Flawless Bits"/>
 
       {/* Open Graph / Facebook */}
       <meta property="og:locale" content="en_US"/>
@@ -34,6 +35,6 @@ export default () => {
       />
       <meta property="twitter:image" content="https://s3.amazonaws.com/flawless-bits.com/flawless-bits-card.png"/>
 
-    </MetaTags>
+    </Helmet>
   );
 };

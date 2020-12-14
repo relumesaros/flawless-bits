@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import { withRouter } from 'react-router-dom';
 import CloseIcon from '@material-ui/icons/Close';
 
-import blogRestVsGraphQLSrc from '../../assets/blog/blogRestVsGraphQL.png';
+import blogRestVsGraphQLSrc from '../../assets/blog/restVsGraphQL.png';
 import thatsAllFolksSrc from '../../assets/blog/thatsAllFolks.png';
 import { LinearGradientDesc } from "../common/LinearGradient";
 import navbarConfig from "../../config/navbarConfig";
@@ -18,7 +18,7 @@ import {
   TitleH2,
   TitleH3
 } from "./BlogStyles";
-import { blogConfig } from "../sections/Blog";
+import blogConfig  from "../../config/blogConfig.json";
 import MetaBlog from "../meta/MetaBlog";
 
 export default withRouter(props => {
@@ -40,10 +40,10 @@ export default withRouter(props => {
     <Section>
 
       <MetaBlog
-        title={blogConfig.restVsGraphQL.title}
-        subTitle={blogConfig.restVsGraphQL.subTitle}
-        link={blogConfig.restVsGraphQL.link}
-        s3imageBucketPath={'blog/blogRestVsGraphQL.png'}
+        title={blogConfig.restVsGraphql.title}
+        subTitle={blogConfig.restVsGraphql.subTitle}
+        link={blogConfig.restVsGraphql.link}
+        s3imageBucketPath={blogConfig.restVsGraphql.imageSrc}
       />
 
       <CloseButton>

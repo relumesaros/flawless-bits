@@ -6,6 +6,7 @@ const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 const commonPaths = require('./paths');
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   entry: commonPaths.entryPath,
@@ -66,7 +67,24 @@ module.exports = {
   },
   plugins: [
     new webpack.ProgressPlugin(),
+    new CopyPlugin({
+      patterns: [
+        {
+          from: "src/assets/blog",
+          to: `${commonPaths.outputPath}/blog`,
+        },
+      ],
+    }),
+    new CopyPlugin({
+      patterns: [
+        {
+          from: "src/config/blogConfig.json",
+          to: `${commonPaths.outputPath}/blogConfig.json`,
+        },
+      ],
+    }),
     new HtmlWebpackPlugin({
+      filename: 'index.html',
       template: commonPaths.templatePath,
     }),
     new ScriptExtHtmlWebpackPlugin({

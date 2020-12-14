@@ -1,12 +1,12 @@
 import React from 'react';
-import MetaTags, { ReactTitle } from 'react-meta-tags';
+import { Helmet } from 'react-helmet';
 
 export default ({ title, subTitle, s3imageBucketPath, link }) => {
   return (
-    <MetaTags>
-      {/* Primary Meta Tags */}
-      <ReactTitle title={title}/>
+    <Helmet>
+      <title>{title}</title>
 
+      {/* Primary Meta Tags */}
       <meta
         name="description"
         content={subTitle}
@@ -34,6 +34,6 @@ export default ({ title, subTitle, s3imageBucketPath, link }) => {
       />
       <meta property="twitter:image" content={`https://s3.amazonaws.com/flawless-bits.com/${s3imageBucketPath}`}/>
 
-    </MetaTags>
+    </Helmet>
   );
 };

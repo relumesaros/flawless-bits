@@ -1,10 +1,9 @@
 /* eslint-disable */
 import React, { useEffect } from 'react';
-import MetaTags, { ReactTitle } from 'react-meta-tags';
 import { withRouter } from 'react-router-dom';
 import CloseIcon from '@material-ui/icons/Close';
 
-import classLoadersSrc from '../../assets/blog/blogClassLoaders.jpg';
+import classLoadersSrc from '../../assets/blog/classLoaders.jpg';
 import { LinearGradientDesc } from "../common/LinearGradient";
 import navbarConfig from "../../config/navbarConfig";
 import onScrollToHandler from "../../handlers/onScrollToHandler";
@@ -18,7 +17,7 @@ import {
   TitleH2,
   TitleH3
 } from "./BlogStyles";
-import { blogConfig } from "../sections/Blog";
+import blogConfig  from "../../config/blogConfig.json";
 import MetaBlog from "../meta/MetaBlog";
 
 export default withRouter(props => {
@@ -39,10 +38,10 @@ export default withRouter(props => {
   return (
     <Section>
       <MetaBlog
-        title={blogConfig.classLoadersJVM.title}
-        subTitle={blogConfig.classLoadersJVM.subTitle}
-        link={blogConfig.classLoadersJVM.link}
-        s3imageBucketPath={'blog/blogClassLoaders.jpg'}
+        title={blogConfig.classLoadersAndHowTheyAreUsedInJvm.title}
+        subTitle={blogConfig.classLoadersAndHowTheyAreUsedInJvm.subTitle}
+        link={blogConfig.classLoadersAndHowTheyAreUsedInJvm.link}
+        s3imageBucketPath={blogConfig.classLoadersAndHowTheyAreUsedInJvm.imageSrc}
       />
 
       <CloseButton>
