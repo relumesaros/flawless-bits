@@ -1,0 +1,32 @@
+{
+  "cleanCodeFunctionsAndMethods": {
+    "title": "Writing Clean Code. Functions and Methods(Part 2).",
+    "subTitle": "This article will show you how clean functions can help you avoid duplicated code, avoid indentation(or arrow code) and mark real intent. After that we’ll show you some tips for improving your functions.",
+    "imageSrc": "blog/cleanCodeFunctionsAndMethods.png",
+    "link": "blog/clean-code-functions-and-methods"
+  },
+  "cleanCodeProperNaming": {
+    "title": "Writing Clean Code. Proper Naming for variables, methods and classes(Part 1).",
+    "subTitle": "Proper Naming is Hard and it takes years of development to really understand the power and importance of expressing Real Intent.",
+    "imageSrc": "blog/cleanCodeProperNaming.png",
+    "link": "blog/clean-code-proper-naming"
+  },
+  "classLoadersAndHowTheyAreUsedInJvm": {
+    "title": "Class Loaders and how they are used in JVM.",
+    "subTitle": "What are the Class Loaders and how they are used in JVM? After reading this you will know the differences between Class Loader, Bootstrap Class Loader, Extensions Class Loader and System Class Loader.",
+    "imageSrc": "blog/classLoaders.jpg",
+    "link": "blog/class-loaders-and-how-they-are-used-in-jvm"
+  },
+  "restVsGraphql": {
+    "title": "REST vs. GraphQL: A Critical Review.",
+    "subTitle": "Deciding between using GraphQL and REST can always be a tough decision, so we’re gonna show the Pros and Cons of using each.",
+    "imageSrc": "blog/restVsGraphQL.png",
+    "link": "blog/rest-vs-graphql"
+  },
+  "reactjsWithUsecontextAndUsereducerHooksExample": {
+    "title": "Basic ReactJs Example with useContext() and useReducer() Hooks.",
+    "subTitle": "State management can always be problematic and Redux came up with a really good solution for this. But Redux can now be evaded and you can resort to ReactJS native hooks: useReducer() and useContext().",
+    "imageSrc": "blog/useContextAndReducer.png",
+    "link": "blog/reactjs-with-usecontext-and-usereducer-hooks-example"
+  }
+}
