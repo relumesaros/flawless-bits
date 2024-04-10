@@ -26,6 +26,7 @@ const InputWrapper = styled.textarea`
   @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
     font-size: 9px;
     letter-spacing: 1px;
+    padding: 5px;
   }
 `
 
@@ -50,7 +51,7 @@ const InputFieldTextarea = (
             <InputWrapper
                 id={name}
                 name={name}
-                rows="5"
+                rows="4"
                 placeholder={inputLabel}
                 {...register(name, validation)}
             />

@@ -11,13 +11,13 @@ const SectionWrapperStyled = styled.div<ISectionWrapperStyled>`
   min-height: 100%;
   padding: 80px 17% 60px 17%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-direction: column;
   box-sizing: border-box;
   background-color: ${(props => props.$backgroundColor || 'none')};
 
   @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
-    padding: 40px 50px 40px 50px;
+    padding: 20px 40px;
   }
 `;
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import LoadingSpinnerSvg from "../assets/icons/LoadingSpinnerSvg";
 
 const LoaderTransparentWrapper = styled.div`
   width: 100%;
@@ -18,7 +19,7 @@ const LoaderTransparentWrapper = styled.div`
 `;
 
 interface ILoaderTransparent {
-    children: () => JSX.Element;
+    children: React.ReactNode;
     isActive: boolean;
 }
 
@@ -28,8 +29,7 @@ const LoaderTransparent = ({children, isActive}: ILoaderTransparent) => {
             {children}
             {isActive && (
                 <LoaderTransparentWrapper>
-                    <p>Loading</p>
-                    {/*<CircularProgress style={{ color: '#c1c1c1' }} size={size} />*/}
+                    <LoadingSpinnerSvg size={'20'} />
                 </LoaderTransparentWrapper>
             )}
         </>

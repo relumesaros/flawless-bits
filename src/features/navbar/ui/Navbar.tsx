@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import debounce from 'lodash/debounce';
 import styled from 'styled-components';
-import logoSrc from '../../../shared/assets/logo.png';
+import logoSrc from '../../../shared/assets/logo.jpg';
 import { useGlobalState } from '../../../app/context/GlobalContextProvider';
 import navbarConfig from '../../../shared/config/navbar.config';
 import useScroll, { getNavbarHeight } from '../lib/useScroll';

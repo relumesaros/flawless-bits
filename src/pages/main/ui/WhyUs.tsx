@@ -6,10 +6,10 @@ import {
 } from '../../../shared/ui/ScrollArrow';
 import navbarConfig from '../../../shared/config/navbar.config';
 import stylesConfig from '../../../shared/config/styles.config';
-import Header3 from "../../../shared/ui/Header3";
 import SectionWrapper from "../../../shared/ui/Section";
 import TextWithArrow from "../../../shared/ui/TextWithArrow";
 import Text from "../../../shared/ui/Text";
+import Header2 from "../../../shared/ui/Header2";
 
 const WhyUsTitleWrapper = styled.div`
   grid-area: grid-why-us-title;
@@ -79,22 +79,26 @@ export default () => {
             <ScrollArrowUp scrollDestination={navbarConfig.sections.vision}/>
             <Content>
                 <WhyUsTitleWrapper>
-                    <Header3>Why us?</Header3>
+                    <Header2>Why us?</Header2>
                 </WhyUsTitleWrapper>
                 <WhyUsContent>
-                    <TextWithArrow text={'Our software engineers are coding for more than 10 years.'}/>
-                    <TextWithArrow text={'We deliver FAST.'}/>
-                    <TextWithArrow text={'We are very TRANSPARENT.'}/>
+                    <TextWithArrow text={'Our software engineers wield over a decade of coding mastery.'}/>
+                    <TextWithArrow text={'We champion RAPID deliveries.'}/>
+                    <TextWithArrow text={'Transparency is our cornerstone.'}/>
                 </WhyUsContent>
                 <AboutUsTitle>
-                    <Header3>Who are we?</Header3>
+                    <Header2>Who are we?</Header2>
                 </AboutUsTitle>
                 <AboutUsText>
                     <Text>
-                        We are close friends, founders and tech people.
-                        We know each other very well, and some of us were also teammates while working for
-                        top software companies.
-                        Our contribution left a strong footprint on the projects we were assigned on.
+                        We are not merely close friends; we are the architects, the pioneers,
+                        the tech-savvy minds shaping tomorrow. Our bonds run deep, forged
+                        through shared experiences and countless hours of collaboration.
+                        Many of us have traversed the corporate landscape together, serving
+                        as valued teammates within the corridors of leading software enterprises.
+                        Our collective expertise has left an indelible mark on every project
+                        we've touched, imprinting our vision and dedication onto the very
+                        fabric of innovation.
                     </Text>
                 </AboutUsText>
             </Content>

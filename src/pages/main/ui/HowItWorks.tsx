@@ -94,7 +94,7 @@ export default () => {
                 />
             </HowItWorksIconsWrapper>
 
-            <ScrollArrowDown scrollDestination={navbarConfig.sections.contactUs}/>
+            <ScrollArrowDown scrollDestination={navbarConfig.sections.blog}/>
         </SectionWrapper>
     );
 };

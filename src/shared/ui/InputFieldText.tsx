@@ -24,6 +24,8 @@ const InputWrapper = styled.input`
   }
 
   @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
+    height: 25px;
+    padding: 5px;
     font-size: 9px;
     letter-spacing: 1px;
   }

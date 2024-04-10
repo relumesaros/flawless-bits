@@ -6,12 +6,11 @@ import MailSvg from '../assets/icons/MailSvg';
 import LinkedInSvg from '../assets/icons/LinkedInSvg';
 import FacebookSvg from '../assets/icons/FacebookSvg';
 import stylesConfig from '../config/styles.config';
-import logoSrc from '../assets/logo.png';
+import logoSrc from '../assets/logo.jpg';
 
 const FooterWrapper = styled.div`
   height: 220px;
-  padding: 0 17%;
-  margin-top: 30px;
+  padding: 30px 17%;
   box-sizing: border-box;
   background-color: ${stylesConfig.colors.black};
   border-top: 1px solid #f1f0f0;
@@ -19,7 +18,7 @@ const FooterWrapper = styled.div`
   color: white;
 
   @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
-    padding: 0 10%;
+    padding: 10px 10%;
     height: 100px;
     letter-spacing: 0px;
   }
@@ -35,6 +34,7 @@ const FooterContentContainer = styled.div`
   @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
     padding: 0 2px;
     grid-column-gap: 3px;
+    grid-row-gap: 2px;
   }
 `;
 
@@ -69,14 +69,14 @@ const ContactIconsWrapper = styled.div`
 const HeaderSection = styled.div`
   display: grid;
   align-items: center;
-  margin: 15px 0;
+  margin: 10px 0;
   grid-column-gap: 5px;
   grid-row-gap: 2px;
   grid-template-columns: auto auto;
   justify-content: flex-start;
 
   @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
-    margin: 5px 0 5px 0;
+    margin: 5px 0;
   }
 `;
 
@@ -130,11 +130,10 @@ export default () => {
     return (
         <FooterWrapper>
             <HeaderSection>
-                <NavbarLogo src={logoSrc}/>
                 <Title>Flawless Bits</Title>
                 <div/>
                 <Subtitle>
-                    Transparent, efficient, fast and familiarized with the Agile methodology.
+                    Transparent, streamlined, rapid, and adept in Agile practices.
                 </Subtitle>
             </HeaderSection>
 

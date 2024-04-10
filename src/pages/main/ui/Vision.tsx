@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import visionSrc from '../../../shared/assets/vision.png';
+import visionSrc from '../../../shared/assets/vision.jpg';
 import navbarConfig from '../../../shared/config/navbar.config';
 import { ScrollArrowDown } from '../../../shared/ui/ScrollArrow';
 import stylesConfig from '../../../shared/config/styles.config';
@@ -33,7 +33,8 @@ export default () => {
         <SectionWrapper id={navbarConfig.sections.vision} backgroundColor='none'>
             <ImageBackground $imageSrc={visionSrc}/>
             <Header2>
-                Our mission is to offer end-to-end digital design, development, and scaling solutions
+
+                Our mission is to provide comprehensive solutions encompassing digital design, development, and scalable growth strategies.
             </Header2>
             <WhatWeKnowWrapper>
                 <Header3>Technologies we master:</Header3>

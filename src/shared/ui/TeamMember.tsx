@@ -30,7 +30,7 @@ const TeamMemberContent = styled.div`
   padding: 15px;
 
   @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
-    height: 40px;
+    height: 30px;
     padding: 5px;
   }
 `;
@@ -51,10 +51,8 @@ const TeamMember = (
     return (
         <TeamMemberWrapper $imageUrl={imageUrl}>
             <TeamMemberContent>
-                <Text>{name}</Text>
-                <SubText>
-                    <strong>{role}</strong>
-                </SubText>
+                <SubText>{name}</SubText>
+                <SubText>{role}</SubText>
             </TeamMemberContent>
         </TeamMemberWrapper>
     );

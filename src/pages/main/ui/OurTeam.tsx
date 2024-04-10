@@ -20,7 +20,7 @@ import Header2 from "../../../shared/ui/Header2";
 const OurTeamContainerDesktop = styled.div`
   width: 100%;
   height: 100%;
-  margin: 60px 0 20px 0;
+  margin: 40px 0 20px 0;
   display: grid;
   grid-column-gap: 15px;
   grid-row-gap: 70px;
@@ -28,7 +28,7 @@ const OurTeamContainerDesktop = styled.div`
   justify-content: center;
 
   @media only screen and (max-width: ${stylesConfig.maxWidth}px), screen and (max-height: ${stylesConfig.maxHeight}px) {
-    margin: 30px 0 20px 0;
+    margin: 20px 0 20px 0;
     grid-template-columns: repeat(auto-fill, ${stylesConfig.teamMember.mobile.width});
     grid-row-gap: 5px;
     grid-column-gap: 5px;
@@ -39,9 +39,7 @@ const OurTeam = () => {
     return (
         <SectionWrapper id={navbarConfig.sections.ourTeam} backgroundColor={stylesConfig.colors.white}>
             <ScrollArrowUp scrollDestination={navbarConfig.sections.whyUs}/>
-
             <Header2>Meet Our Team.</Header2>
-
             <OurTeamContainerDesktop>
                 <TeamMember
                     name="Aurelian Mesaros"
@@ -54,7 +52,7 @@ const OurTeam = () => {
                     role={jobRole.roleFullstackAndCoFounder}
                 />
                 <TeamMember
-                    name="Adrian Mesaros"
+                    name="Adrian"
                     imageUrl={teamAdrianMesarosSrc}
                     role={jobRole.roleFullstack}
                 />
@@ -64,12 +62,12 @@ const OurTeam = () => {
                     role={jobRole.roleFullstack}
                 />
                 <TeamMember
-                    name="Alex Popa"
+                    name="Alex"
                     imageUrl={teamAlexPopaSrc}
                     role={jobRole.roleFullstack}
                 />
                 <TeamMember
-                    name="Zoltan Zelenyak"
+                    name="Zoltan"
                     imageUrl={teamZoltanZelenyacSrc}
                     role={jobRole.roleUIUXDesigner}
                 />

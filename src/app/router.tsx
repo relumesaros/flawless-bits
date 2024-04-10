@@ -4,6 +4,7 @@ import Navbar from '../features/navbar/ui/Navbar';
 import { Main } from '../pages/main';
 import SwitchWrapper from "./ui/SwitchWrapper";
 import RouterWrapper from "./ui/RouterWrapper";
+import { BlogPage } from "../pages/blog";
 // import UseContextAndUseReducer from './blog/UseContextAndUseReducer';
 // import RestVsGraphQL from './blog/RestVsGraphQL';
 // import ClassLoadersAndHowTheyAreUsedInJvm from './blog/ClassLoadersAndHowTheyAreUsedInJvm';
@@ -21,6 +22,14 @@ export const router = createBrowserRouter([
                 <SwitchWrapper>
                     <Main/>
                 </SwitchWrapper>
+            </RouterWrapper>
+        ),
+    },
+    {
+        path: "/blog/:articleName",
+        element: (
+            <RouterWrapper>
+                <BlogPage/>
             </RouterWrapper>
         ),
     },

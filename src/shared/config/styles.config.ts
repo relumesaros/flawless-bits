@@ -29,8 +29,8 @@ export default {
       height: '400px'
     },
     mobile: {
-      width: '120px',
-      height: '160px'
+      width: '100px',
+      height: '140px'
     }
   }
 };

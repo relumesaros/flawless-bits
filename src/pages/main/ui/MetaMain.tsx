@@ -7,8 +7,6 @@ export default () => {
             <Helmet>
                 <title>Flawless Bits</title>
 
-                {/* Primary Meta Tags */}
-
                 <meta
                     name="description"
                     content="Flawless Bits is a startup outsourcing company that builds web-based applications for organizations looking to be more efficient, grow and serve their customers better."
